@@ -2,3 +2,70 @@
 main {
     position: relative;
 }
+.inner-layout {
+    display: flex;
+}
+
+.secondary-nav {
+    position: fixed;
+    width: 120px;
+    height: 100%;
+    background: $bg-body-lighter;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        list-style-type: none;
+        height: 100%;
+        padding: 0;
+    }
+    li {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+        color: $body-text;
+
+        .test {
+            font-size: 30px;
+
+            &:hover {
+                animation: bounce 1s infinite;
+                + span {
+                    opacity: 1;
+                }
+            }
+        }
+
+        span {
+            opacity: 0;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 6px;
+            transition: 0.1s ease-in-out;
+        }
+    }
+}
+
+@keyframes bounce {
+    0%,
+    to {
+      transform: translateY(-25%);
+      -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }

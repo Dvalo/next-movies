@@ -1,9 +1,14 @@
+import Layout from "../../layout/Layout";
 import { dummy } from "../../utils/dummy";
 import { requests } from "../../utils/requests";
 
 function Genre({ results }) {
   console.log(results);
-  return <div></div>;
+  return (
+    <Layout>
+      <div></div>
+    </Layout>
+  );
 }
 
 export default Genre;

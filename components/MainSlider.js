@@ -1,6 +1,8 @@
 import { Container } from "react-bootstrap";
 import Slider from "react-slick";
-import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,7 +12,7 @@ function MainSlider() {
     const { className, onClick } = props;
     return (
       <div className={className} onClick={onClick}>
-        <ChevronDown className="icon icon-chevron-down" />
+        <FontAwesomeIcon icon={faChevronDown} className="icon icon-chevron-down" />
       </div>
     );
   }
@@ -19,7 +21,7 @@ function MainSlider() {
     const { className, onClick } = props;
     return (
       <div className={className} onClick={onClick}>
-        <ChevronUp className="icon icon-chevron-up" />
+        <FontAwesomeIcon icon={faChevronUp} className="icon icon-chevron-up" />
       </div>
     );
   }
