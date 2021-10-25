@@ -7,19 +7,19 @@ function Sidebar() {
       <ul>
         <li>
           <a href="#">
-            <FontAwesomeIcon icon={faHome} className="test" />
+            <FontAwesomeIcon icon={faHome} className="nav-icon" />
             <span>Home</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <FontAwesomeIcon icon={faFilm} className="test" />
+            <FontAwesomeIcon icon={faFilm} className="nav-icon" />
             <span>Movies</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <FontAwesomeIcon icon={faVideo} className="test" />
+            <FontAwesomeIcon icon={faVideo} className="nav-icon" />
             <span>Tv Shows</span>
           </a>
         </li>
