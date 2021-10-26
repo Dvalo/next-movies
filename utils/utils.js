@@ -1,3 +1,18 @@
+export const mainNavItems = [
+  {
+    name: "Movies",
+    path: "/"
+  },
+  {
+    name: "Tv Shows",
+    path: "/tv"
+  },
+  {
+    name: "Actors",
+    path: "/actors"
+  }
+]
+
 export const movieGenres = [
   {
     id: 28,
