@@ -19,9 +19,13 @@
             filter: drop-shadow(2px 4px 6px black);
         }
 
+        .intro-slide-inner {
+            height: 90vh;
+        }
+
         img {
             display: block;
-            height: 90vh;
+            height: auto;
             width: 100%;
         }
 
@@ -241,10 +245,29 @@
     border-top-left-radius: 6px;
 
     .filters-wrapper {
+        position: relative;
+        height: 100%;
+        max-width: 65%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: linear-gradient(270deg, $bg-body-darker 0%, rgba(0,0,0,0) 100%);
+            height: 100%;
+            width: 100px;
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+    .filters-wrapper-inner {
+        position: relative;
         display: flex;
         align-items: center;
         height: 100%;
-        border-bottom: 3px solid $border-light;
+        overflow-x: scroll;
+        scrollbar-color: $bg-body-lighter transparent; //firefox
     }
 
     .filter {
@@ -252,9 +275,24 @@
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1px;
+        color: $body-text;
+        text-decoration: none;
+        flex: none;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $highlight-red;
+            mask-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 30%, #000 50%, rgba(0, 0, 0, 0.5) 70%);
+            mask-size: 200%;
+            animation: shine-over 1.75s infinite;
+        }
 
         &:not(:last-child) {
-            margin-right: 28px;
+            margin-right: 36px;
+        }
+
+        &:last-child {
+            padding-right: 70px; //offset for gradient visibility
         }
     }
 }

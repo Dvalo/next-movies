@@ -1,3 +1,21 @@
+// Custom scrollbar styling
+::-webkit-scrollbar {
+	height: 6px;
+    width: 12px;
+}
+::-webkit-scrollbar-track:vertical {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb:vertical {
+	background: $bg-body;
+    border: 3px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:horizontal {
+	background: $bg-body-lighter;
+	height: 4px;
+}
 // SVG Icons
 [class^="icon-"],
 [class*=" icon-"] {

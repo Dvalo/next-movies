@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Container } from "react-bootstrap";
 import MainSlider from "../components/MainSlider";
 import ShowcaseItem from "../components/ShowcaseItem";
+import { movieGenres, removeSpaces } from "../utils/utils";
 import { dummy } from "../utils/dummy";
 import { fetchTrendingMovies } from "../utils/requests";
 
@@ -22,12 +23,13 @@ export default function Home({ movies }) {
         <Container>
           <div className="filters">
             <div className="filters-wrapper">
-              <div className="filter">Trending</div>
-              <div className="filter">Top Rated</div>
-              <div className="filter">Action</div>
-              <div className="filter">Comedy</div>
-              <div className="filter">Horror</div>
-              <div className="filter">Romance</div>
+              <div className="filters-wrapper-inner">
+                {movieGenres.map(({ name, id }) => (
+                  <a href={`/movies/${removeSpaces(name)}`} className="filter" key={id}>
+                    {name}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           <section className="item-showcase showcase-main">
