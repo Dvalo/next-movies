@@ -8,7 +8,7 @@ main {
 
 .secondary-nav {
     position: fixed;
-    width: 120px;
+    width: 110px;
     height: 100%;
     background: $bg-body-lighter;
 
@@ -25,6 +25,14 @@ main {
         &:not(:last-child) {
             margin-bottom: 24px;
         }
+        &:hover {
+            .nav-icon {
+                animation: bounce 1s infinite;
+            }
+            span {
+                opacity: 1;
+            }
+        }
     }
     a {
         display: flex;
@@ -35,13 +43,6 @@ main {
 
         .nav-icon {
             font-size: 30px;
-
-            &:hover {
-                animation: bounce 1s infinite;
-                + span {
-                    opacity: 1;
-                }
-            }
         }
 
         span {
@@ -56,16 +57,63 @@ main {
     }
 }
 
+.secondary-searchbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: $bg-body-lighter;
+}
+
+.mov-searchbar {
+    input,
+    button {
+        outline: none;
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+    input {
+        color: $body-text;
+        font-size: 14px;
+        font-weight: 500;
+
+        &::placeholder {
+            color: $body-text;
+        }
+    }
+    button {
+        padding-right: 15px;
+    }
+    .icon {
+        font-size: 22px;
+        color: $highlight-red;
+    }
+}
+
+.inner-layout-content {
+    width: calc(100vw - 110px);
+    margin-left: 110px;
+
+    .showcase-container {
+        padding: 50px;
+    }
+    .showcase-inner {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+}
+
 @keyframes bounce {
     0%,
     to {
       transform: translateY(-25%);
-      -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
     50% {
       transform: none;
-      -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
-  }
+}

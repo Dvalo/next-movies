@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faFilm, faVideo } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faFilm, faVideo, faUserFriends } from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar() {
   return (
@@ -21,6 +21,12 @@ function Sidebar() {
           <a href="#">
             <FontAwesomeIcon icon={faVideo} className="nav-icon" />
             <span>Tv Shows</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <FontAwesomeIcon icon={faUserFriends} className="nav-icon" />
+            <span>Actors</span>
           </a>
         </li>
       </ul>
