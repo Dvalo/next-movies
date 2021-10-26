@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap');
 
+// Intro full width slider
 .intro-slider {
     line-height: 0;
 
@@ -141,12 +142,100 @@
         }
     }
 }
+.item-showcase {
+    .showcase-img {
+        position: relative;
+        transition: 0.1s ease-in-out;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            z-index: 9;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 45%;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+            z-index: 9;
+        }
+        img {
+            transition: 0.15s ease-in-out;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+            .showcase-language,
+            .showcase-certification {
+                opacity: 1;
+            }
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        .showcase-language,
+        .showcase-certification,
+        .showcase-year {
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.65);
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 500;
+            z-index: 99;
+            transition: 0.3s ease-in-out;
+        }
+        .showcase-language,
+        .showcase-certification {
+            opacity: 0;
+        }
+        .showcase-certification {
+            top: 8px;
+            left: 8px;
+            padding: 0 6px;
+        }
+        .showcase-year {
+            bottom: 8px;
+            right: 8px;
+            padding: 1px 5px;
+        }
+        .showcase-language {
+            font-size: 12px;
+            text-transform: uppercase;
+            top: 8px;
+            right: 8px;
+            padding: 1px 5px;
+        }
+    }
+    .showcase-desc {
+        max-width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        margin: 6px 0 0;
+    }
+    .showcase-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $highlight-red;
+    }
+}
+// Filters bar
 .filters {
     position: relative;
     height: 80px;
     top: -80px;
     padding: 0 20px;
-    background: #16182a;
+    background: $bg-body-darker;
     color: #fff;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -155,7 +244,7 @@
         display: flex;
         align-items: center;
         height: 100%;
-        border-bottom: 1px solid red;
+        border-bottom: 3px solid $border-light;
     }
 
     .filter {

@@ -105,86 +105,13 @@ main {
         column-gap: 15px;
         row-gap: 15px;
     }
-    .showcase-img {
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.65);
-            opacity: 0;
-            transition: 0.3s ease-in-out;
-            z-index: 9;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 45%;
-            bottom: 0;
-            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-            z-index: 9;
-        }
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
-            .showcase-language,
-            .showcase-certification {
-                opacity: 1;
-            }
-        }
-
-        .showcase-language,
-        .showcase-certification,
-        .showcase-year {
-            position: absolute;
-            border: 1px solid white;
-            border-radius: 3px;
-            font-size: 13px;
-            font-weight: 500;
-            z-index: 99;
-            transition: 0.3s ease-in-out;
-        }
-        .showcase-language,
-        .showcase-certification {
-            opacity: 0;
-        }
-        .showcase-certification {
-            top: 8px;
-            left: 8px;
-            padding: 0 6px;
-        }
-        .showcase-year {
-            bottom: 8px;
-            right: 8px;
-            padding: 2px 5px;
-        }
-        .showcase-language {
-            font-size: 12px;
-            text-transform: uppercase;
-            top: 8px;
-            right: 8px;
-            padding: 1px 5px;
-        }
-    }
-    .showcase-desc {
-        max-width: 90%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 14px;
-        margin: 6px 0 0;
-    }
-    .showcase-title {
-        font-size: 20px;
-        font-weight: 600;
-        color: $highlight-red;
-    }
 }
-
+.showcase-main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 15px;
+    row-gap: 15px;
+}
 @keyframes bounce {
     0%,
     to {

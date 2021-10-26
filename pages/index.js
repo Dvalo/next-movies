@@ -4,8 +4,11 @@ import Head from "next/head";
 import Image from "next/image";
 import { Container } from "react-bootstrap";
 import MainSlider from "../components/MainSlider";
+import ShowcaseItem from "../components/ShowcaseItem";
+import { dummy } from "../utils/dummy";
+import { fetchTrendingMovies } from "../utils/requests";
 
-export default function Home() {
+export default function Home({ movies }) {
   return (
     <>
       <Head>
@@ -27,8 +30,25 @@ export default function Home() {
               <div className="filter">Romance</div>
             </div>
           </div>
+          <section className="item-showcase showcase-main">
+            {movies.map((movie) => (
+              <ShowcaseItem item={movie} key={movie.id} />
+            ))}
+          </section>
         </Container>
       </main>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  // const request = await fetch(
+  //   `https://api.themoviedb.org/3${fetchTrendingMovies}`
+  // ).then((res) => res.json());
+
+  return {
+    props: {
+      movies: dummy,
+    },
+  };
 }

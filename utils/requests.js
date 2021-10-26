@@ -67,7 +67,11 @@ export const requests = {
   },
 };
 
+export function fetchTrendingMovies() {
+  return `/trending/movie/week?api_key=${API_KEY}`;
+}
+
 export function discoverMoviesByGenre(genre) {
-  return `/discover/movie?api_key=${API_KEY}&with_genres=${movieGenreIds[genre].id}`
+  return `/discover/movie?api_key=${API_KEY}&with_genres=${movieGenreIds[genre].id}`;
 }
 // https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
