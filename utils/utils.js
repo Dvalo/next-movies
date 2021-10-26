@@ -1,17 +1,26 @@
+import {
+  faFilm,
+  faVideo,
+  faUserFriends,
+} from "@fortawesome/free-solid-svg-icons";
+
 export const mainNavItems = [
   {
     name: "Movies",
-    path: "/"
+    path: "/",
+    icon: faFilm,
   },
   {
     name: "Tv Shows",
-    path: "/tv"
+    path: "/tv",
+    icon: faVideo,
   },
   {
     name: "Actors",
-    path: "/actors"
-  }
-]
+    path: "/actors",
+    icon: faUserFriends,
+  },
+];
 
 export const movieGenres = [
   {
@@ -94,8 +103,6 @@ export const movieGenres = [
 
 export function removeSpaces(url) {
   return encodeURIComponent(
-    decodeURIComponent(url)
-      .replace(/\s+/g, "-")
-      .toLocaleLowerCase()
+    decodeURIComponent(url).replace(/\s+/g, "-").toLocaleLowerCase()
   );
 }
