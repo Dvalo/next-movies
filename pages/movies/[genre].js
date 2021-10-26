@@ -14,14 +14,27 @@ function MovieGenre({ results }) {
           <div className="showcase-inner">
             {results.map((movie) => (
               <div className="showcase-item" key={movie.id}>
-                <Image
-                  src={`${BASE_URL}${movie.backdrop_path || movie.poster_path}`}
-                  alt={movie.original_title}
-                  layout="responsive"
-                  objectFit="cover"
-                  height={1080}
-                  width={1920}
-                />
+                <div className="showcase-img">
+                  <div className="showcase-language">{movie.original_language}</div>
+                  <div className="showcase-certification">
+                    {movie.adult ? "R" : "G"}
+                  </div>
+                  <div className="showcase-year">
+                    {new Date(movie.release_date).getFullYear()}
+                  </div>
+                  <Image
+                    src={`${BASE_URL}${
+                      movie.backdrop_path || movie.poster_path
+                    }`}
+                    alt={movie.original_title}
+                    layout="responsive"
+                    objectFit="cover"
+                    height={1080}
+                    width={1920}
+                  />
+                </div>
+                <div className="showcase-desc">{movie.overview}</div>
+                <div className="showcase-title">{movie.title}</div>
               </div>
             ))}
           </div>
