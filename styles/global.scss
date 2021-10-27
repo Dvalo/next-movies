@@ -1,3 +1,42 @@
+@import 'mixins';
+
+:root.theme-cinder {
+    @include spread-map($theme-map-cinder);
+}
+:root.theme-mirage {
+    @include spread-map($theme-map-mirage);
+}
+:root.theme-dark-slate {
+    @include spread-map($theme-map-dark-slate);
+}
+:root.theme-darkness {
+    @include spread-map($theme-map-darkness);
+}
+:root.theme-light-gray {
+    @include spread-map($theme-map-light-gray);
+}
+:root.text-red {
+    @include spread-map($text-map-red);
+}
+:root.text-blue {
+    @include spread-map($text-map-blue);
+}
+:root.text-cyan {
+    @include spread-map($text-map-cyan);
+}
+:root.text-yellow {
+    @include spread-map($text-map-yellow);
+}
+:root.text-pink {
+    @include spread-map($text-map-pink);
+}
+:root.text-green {
+    @include spread-map($text-map-green);
+}
+:root {
+	--bs-body-color: var(--theme-text-color);
+	--bs-body-bg: var(--theme-primary);
+}
 // Custom scrollbar styling
 ::-webkit-scrollbar {
 	height: 6px;
@@ -7,13 +46,13 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 ::-webkit-scrollbar-thumb:vertical {
-	background: $bg-body;
+	background: var(--theme-primary);
     border: 3px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
 }
 ::-webkit-scrollbar-thumb:horizontal {
-	background: $bg-body-lighter;
+	background: var(--theme-secondary);
 	height: 4px;
 }
 // SVG Icons

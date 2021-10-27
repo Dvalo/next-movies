@@ -230,16 +230,17 @@
     .showcase-title {
         font-size: 20px;
         font-weight: 600;
-        color: $highlight-red;
+        color: var(--theme-primary-highlight);
     }
 }
+
 // Filters bar
 .filters {
     position: relative;
     height: 80px;
     top: -80px;
     padding: 0 20px;
-    background: $bg-body-darker;
+    background: var(--theme-primary-darker);
     color: #fff;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -255,7 +256,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            background: linear-gradient(90deg, $bg-body-darker 0%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(90deg, var(--theme-primary-darker) 0%, rgba(0,0,0,0) 100%);
             height: 100%;
             width: 100px;
             user-select: none;
@@ -268,7 +269,7 @@
             position: absolute;
             right: 0;
             top: 0;
-            background: linear-gradient(270deg, $bg-body-darker 0%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(270deg, var(--theme-primary-darker) 0%, rgba(0,0,0,0) 100%);
             height: 100%;
             width: 100px;
             user-select: none;
@@ -282,7 +283,7 @@
         height: 100%;
         padding: 0 60px;
         overflow-x: scroll;
-        scrollbar-color: $bg-body-lighter transparent; //firefox
+        scrollbar-color: var(--theme-secondary) transparent; //firefox
     }
 
     .filter {
@@ -290,13 +291,13 @@
         font-size: 15px;
         font-weight: 600;
         letter-spacing: 2px;
-        color: $body-text;
+        color: var(--theme-text-color);
         text-decoration: none;
         flex: none;
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            color: $highlight-red;
+            color: var(--theme-primary-highlight);
             mask-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
             mask-size: 200%;
             animation: shine-over 1.75s infinite;
@@ -304,6 +305,106 @@
 
         &:not(:last-child) {
             margin-right: 42px;
+        }
+    }
+}
+
+// Theme Editor
+.modal-content {
+    background: var(--theme-secondary) !important;
+
+    .modal-header {
+        border-color: $border-light;
+    }
+    .modal-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+.theme-editor {
+    cursor: pointer;
+}
+.theme-editor-wrapper {
+    p {
+        font-size: 18px;
+        letter-spacing: 1px;
+        color: var(--theme-primary-highlight);
+    }
+    .theme-editor-text-colors {
+        margin-bottom: 20px;
+    }
+    .theme-editor-text-colors,
+    .theme-editor-theme-colors {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .text-color,
+    .theme-color {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        box-shadow: 1px 2px 5px rgb(0 0 0 / 25%);
+        transition: 0.15s ease-in-out;
+    }
+    .text-color {
+        height: 140px;
+        width: 31%;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        &.red {
+            background: #ff6c6c;
+        }
+        &.blue {
+            background: #778ce9;
+        }
+        &.cyan {
+            background: #6cd9e7;
+        }
+        &.yellow {
+            background: #f3d598;
+        }
+        &.pink {
+            background: #fba0be;
+        }
+        &.green {
+            background: #b9eb7e;
+        }
+    }
+    .theme-color {
+        height: 180px;
+        width: 47%;
+        text-transform: capitalize;
+        border: 5px solid rgb(255 255 255 / 50%);
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &.cinder {
+            background: linear-gradient(45deg, #10121a, #262934 100%);
+        }
+        &.mirage {
+            background: linear-gradient(45deg, #16182a 0%, #212548 100%);
+        }
+        &.dark-slate {
+            background: linear-gradient(45deg, #1d1e22 0%, #121214 100%);
+        }
+        &.darkness {
+            background: linear-gradient(45deg, #060606 0%, #000000 100%);
+        }
+        &.light-gray {
+            background: linear-gradient(45deg, #3a3a3a 0%, #505050 100%);
         }
     }
 }
