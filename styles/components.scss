@@ -280,16 +280,16 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 0 50px;
+        padding: 0 60px;
         overflow-x: scroll;
         scrollbar-color: $bg-body-lighter transparent; //firefox
     }
 
     .filter {
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 600;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         color: $body-text;
         text-decoration: none;
         flex: none;
@@ -303,7 +303,7 @@
         }
 
         &:not(:last-child) {
-            margin-right: 36px;
+            margin-right: 42px;
         }
     }
 }
