@@ -54,6 +54,7 @@ main {
         padding: 0;
     }
     li {
+        width: 100%;
         &:not(:last-child) {
             margin-bottom: 24px;
         }
@@ -67,11 +68,22 @@ main {
         }
     }
     a {
+        position: relative;
         display: flex;
         align-items: center;
         flex-direction: column;
         text-decoration: none;
         color: $body-text;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background: $highlight-red;
+            opacity: 0;
+        }
 
         .nav-icon {
             font-size: 30px;
@@ -85,6 +97,15 @@ main {
             letter-spacing: 0.5px;
             margin-top: 6px;
             transition: 0.1s ease-in-out;
+        }
+
+        &.active {
+            &::before {
+                opacity: 1;
+            }
+            span {
+                opacity: 1;
+            }
         }
     }
 }

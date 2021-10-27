@@ -8,16 +8,19 @@ export const mainNavItems = [
   {
     name: "Movies",
     path: "/",
+    secondary: "/movie",
     icon: faFilm,
   },
   {
     name: "Tv Shows",
     path: "/tv",
+    secondary: "/tv",
     icon: faVideo,
   },
   {
     name: "Actors",
     path: "/actors",
+    secondary: "/actor",
     icon: faUserFriends,
   },
 ];
