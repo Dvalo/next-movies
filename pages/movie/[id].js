@@ -37,7 +37,7 @@ function MovieSingle({ movieDetails, movieCredits }) {
                   {new Date(movieDetailsDummy[0].release_date).toDateString()}
                 </div>
                 <div className="showcase-length">
-                  {Math.floor(movieDetailsDummy[0].runtime / 60)}hr
+                  {Math.floor(movieDetailsDummy[0].runtime / 60)}hr{" "}
                   {movieDetailsDummy[0].runtime % 60}min
                 </div>
               </div>
