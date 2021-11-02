@@ -71,6 +71,15 @@ export function fetchTrendingMovies() {
   return `/trending/movie/week?api_key=${API_KEY}`;
 }
 
+export function fetchMovieDetailsById(id) {
+  return `/movie/${id}?api_key=${API_KEY}`;
+}
+
+export function fetchMovieCreditsById(id) {
+  return `/movie/${id}/credits?api_key=${API_KEY}`;
+}
+
+
 export function discoverMoviesByGenre(genre) {
   return `/discover/movie?api_key=${API_KEY}&with_genres=${movieGenreIds[genre].id}`;
 }

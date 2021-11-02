@@ -234,6 +234,101 @@
     }
 }
 
+.showcase-single {
+    font-family: $font-opensans;
+
+    .showcase-image {
+        position: relative;
+
+        img {
+            opacity: 0.45;
+        }
+    }
+    .showcase-details-wrapper {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding: 35px 0;
+        width: 100%;
+        bottom: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(32px);
+    }
+    .showcase-title {
+        font-size: 50px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: var(--theme-primary-highlight);
+    }
+    .showcase-details {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .showcase-genres {
+        margin-bottom: 15px;
+
+        .showcase-genre {
+            background: var(--theme-primary);
+            color: var(--theme-text-color);
+            font-size: 14px;
+            padding: 7px;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                background: var(--theme-primary-darker);
+            }
+        }
+    }
+    .showcase-length {
+        &::before {
+            content: "\A";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #fffefe;
+            margin: 4px 10px;
+            opacity: 0.5;
+        }
+    }
+    .showcase-complete-details {
+        padding: 50px 0;
+
+        .sect-title {
+            padding-left: 10px;
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.cast-slider {
+    .cast-slide {
+        padding: 0 10px;
+        img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+        }
+        .cast-details {
+            margin-top: 10px;
+        }
+        .cast-name {
+            font-weight: 700;
+        }
+        .cast-character-name {
+            font-size: 13px;
+            font-style: italic;
+        }
+    }
+}
+
 // Filters bar
 .filters {
     position: relative;

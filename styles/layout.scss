@@ -115,7 +115,7 @@ main {
     display: flex;
     align-items: center;
     height: 100px;
-    background: var(--theme-secondary);
+    background: var(--theme-primary);
 }
 
 .mov-searchbar {
@@ -147,6 +147,7 @@ main {
 .inner-layout-content {
     width: calc(100vw - 110px);
     margin-left: 110px;
+    overflow: hidden;
 
     // Move to components
     .showcase-container {
