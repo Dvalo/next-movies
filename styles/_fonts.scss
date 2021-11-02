@@ -42,3 +42,38 @@
     font-weight: 900;
     font-style: normal;
 }
+
+/* Open Sans (Regular) */
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("/fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+/* Open Sans (Regular - Italic) */
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/OpenSans-Italic.woff2") format("woff2"),
+        url("/fonts/OpenSans-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Open Sans (SemiBold) */
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-SemiBold.woff2") format("woff2"),
+        url("/fonts/OpenSans-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Open Sans (Bold) */
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Bold.woff2") format("woff2"),
+        url("/fonts/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
