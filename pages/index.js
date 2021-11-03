@@ -9,6 +9,7 @@ import { movieGenres, removeSpaces } from "../utils/utils";
 import { dummy } from "../utils/dummy";
 import { fetchTrendingMovies } from "../utils/requests";
 import MainLayout from "../layout/MainLayout";
+import GenreFilter from "../components/GenreFilter";
 
 export default function Home({ movies }) {
   return (
@@ -20,23 +21,9 @@ export default function Home({ movies }) {
       </Head>
 
       <MainLayout>
-        <MainSlider />
+        <MainSlider slides={movies.slice(0, 4)} />
         <Container>
-          <div className="filters">
-            <div className="filters-wrapper">
-              <div className="filters-wrapper-inner">
-                {movieGenres.map(({ name, id }) => (
-                  <a
-                    href={`/movies/${removeSpaces(name)}`}
-                    className="filter"
-                    key={id}
-                  >
-                    {name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
+          <GenreFilter />
           <section className="item-showcase showcase-main">
             {movies.map((movie) => (
               <ShowcaseItem item={movie} key={movie.id} />

@@ -42,9 +42,13 @@
         .movie-title {
             font-weight: bold;
             font-size: 110px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .movie-genre-wrapper {
             display: flex;
+            padding-left: 8px;
 
             .movie-genre {
                 text-transform: uppercase;
