@@ -3,17 +3,24 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../layout/Layout";
 import { Container } from "react-bootstrap";
-import { dummy, movieDetailsDummy, castDummy } from "../../utils/dummy";
+import {
+  movieDetailsDummy,
+  castDummy,
+  movieVideosDummy,
+} from "../../utils/dummy";
 import {
   discoverMoviesByGenre,
   fetchMovieCreditsById,
   fetchMovieDetailsById,
+  fetchMovieVideosById,
   requests,
 } from "../../utils/requests";
+import MovieTrailer from "../../components/MovieTrailer";
 import CastSlider from "../../components/CastSlider";
 
-function MovieSingle({ movieDetails, movieCredits }) {
+function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
+
   return (
     <>
       <Head>
@@ -52,13 +59,26 @@ function MovieSingle({ movieDetails, movieCredits }) {
                 </div>
                 <div className="showcase-genres">
                   {movieDetailsDummy[0].genres.map((genre) => (
-                    <Link href={`/movies/${genre.name.toLocaleLowerCase()}`} key={genre.id}>
+                    <Link
+                      href={`/movies/${genre.name.toLocaleLowerCase()}`}
+                      key={genre.id}
+                    >
                       <a className="showcase-genre">{genre.name}</a>
                     </Link>
                   ))}
                 </div>
                 <div className="showcase-desc">
                   {movieDetailsDummy[0].overview}
+                </div>
+                <div className="showcase-trailer-wrapper">
+                  {movieVideosDummy[0].results &&
+                    movieVideosDummy[0].results.map((video, index) => (
+                      <MovieTrailer
+                        trailer={video}
+                        index={index}
+                        key={video.key}
+                      />
+                    ))}
                 </div>
               </Container>
             </div>
@@ -88,10 +108,15 @@ export async function getServerSideProps(context) {
   //   `https://api.themoviedb.org/3${fetchMovieCreditsById(movieId)}`
   // ).then((res) => res.json());
 
+  // const movieVideosReq = await fetch(
+  //   `https://api.themoviedb.org/3${fetchMovieVideosById(movieId)}`
+  // ).then((res) => res.json());
+
   return {
     props: {
       movieDetails: "dummy",
       movieCredits: "dummy1",
+      movieVideos: "dummy2",
     },
   };
 }

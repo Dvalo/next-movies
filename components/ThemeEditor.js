@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Cookies from "universal-cookie";
 import { Modal } from "react-bootstrap";
-import { faPalette, faCog } from "@fortawesome/free-solid-svg-icons";
+import { faCog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const themeColors = [

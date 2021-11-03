@@ -79,6 +79,9 @@ export function fetchMovieCreditsById(id) {
   return `/movie/${id}/credits?api_key=${API_KEY}`;
 }
 
+export function fetchMovieVideosById(id) {
+  return `/movie/${id}/videos?api_key=${API_KEY}`;
+}
 
 export function discoverMoviesByGenre(genre) {
   return `/discover/movie?api_key=${API_KEY}&with_genres=${movieGenreIds[genre].id}`;

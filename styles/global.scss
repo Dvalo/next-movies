@@ -55,6 +55,10 @@
 	background: var(--theme-secondary);
 	height: 4px;
 }
+.btn-red {
+    @include button-variant($btn-red, $btn-red);
+}
+
 // SVG Icons
 [class^="icon-"],
 [class*=" icon-"] {

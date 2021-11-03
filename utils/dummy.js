@@ -1,3 +1,95 @@
+export const movieVideosDummy = [
+    {
+        "id": 550988,
+        "results": [
+            {
+                "iso_639_1": "en",
+                "iso_3166_1": "US",
+                "name": "Free Guy | \"Gag Reel\" | 20th Century Studios",
+                "key": "kgcgg92hmpE",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Bloopers",
+                "official": true,
+                "published_at": "2021-10-01 19:07:36 UTC",
+                "id": "61666cb5e4b5760043956422"
+            },
+            {
+                "iso_639_1": "en",
+                "iso_3166_1": "US",
+                "name": "Free Guy | Enter Dude | Trailer",
+                "key": "jRn48HxssPI",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Clip",
+                "official": true,
+                "published_at": "2021-08-02 22:04:37 UTC",
+                "id": "610896cde61e6d0022d7ab61"
+            },
+            {
+                "iso_639_1": "en",
+                "iso_3166_1": "US",
+                "name": "Free Guy Exclusive Movie Clip - Sweet Fantasy (2021) | Movieclips Coming Soon",
+                "key": "BqR-mVP5ffQ",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Clip",
+                "official": false,
+                "published_at": "2021-08-02 13:00:05 UTC",
+                "id": "6107ed5cc613ce005fad948f"
+            },
+            {
+                "iso_639_1": "en",
+                "iso_3166_1": "US",
+                "name": "Free Guy - Official Blue Shirt Guy Clip (2021) Ryan Reynolds, Joe Kerry, Utkarsh Ambudkar",
+                "key": "ihuIjapV3Eg",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Clip",
+                "official": false,
+                "published_at": "2021-07-30 02:00:12 UTC",
+                "id": "61035f31a217c00046c42b3d"
+            },
+            {
+                "iso_639_1": "en",
+                "iso_3166_1": "US",
+                "name": "Free Guy | New Trailer | 20th Century Studios",
+                "key": "cttnRmcr_ME",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Trailer",
+                "official": true,
+                "published_at": "2021-06-10 07:00:08 UTC",
+                "id": "60e49e1727ff990074deb7d2"
+            },
+            {
+                "iso_639_1": "en",
+                "iso_3166_1": "US",
+                "name": "Free Guy | Official Trailer | 20th Century Studios",
+                "key": "JORN2hkXLyM",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Trailer",
+                "official": true,
+                "published_at": "2020-10-05 13:00:27 UTC",
+                "id": "5f7bd19a1fd36f003852cb3b"
+            },
+            {
+                "iso_639_1": "en",
+                "iso_3166_1": "US",
+                "name": "Official Trailer",
+                "key": "X2m-08cOAbc",
+                "site": "YouTube",
+                "size": 1080,
+                "type": "Trailer",
+                "official": true,
+                "published_at": "2019-12-07 18:32:52 UTC",
+                "id": "5debf39fdaf57c0013ea627e"
+            }
+        ]
+    }
+]
+
 export const movieDetailsDummy = [
     {
         "adult": false,
