@@ -55,6 +55,21 @@
 	background: var(--theme-secondary);
 	height: 4px;
 }
+// Extra
+.sect-title {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+    span {
+        color: var(--theme-primary-highlight);
+    }
+}
+
+
+// Buttons
 .btn-red {
     @include button-variant($btn-red, $btn-red);
 }

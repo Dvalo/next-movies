@@ -300,11 +300,6 @@
 
         .sect-title {
             padding-left: 10px;
-            font-size: 40px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
         }
     }
 }
@@ -456,6 +451,11 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        .active {
+            pointer-events: none;
+            opacity: 0.1;
+        }
     }
     .text-color,
     .theme-color {

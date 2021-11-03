@@ -16,6 +16,8 @@ const themeTextColors = ["red", "blue", "cyan", "yellow", "pink", "green"];
 
 function ThemeEditor() {
   const cookies = new Cookies();
+  const [ activeTextColor, setActiveTextColor ] = useState(cookies.get('text-color'));
+  const [ activeThemeColor, setActiveThemeColor ] = useState(cookies.get('theme-color'));
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -23,6 +25,7 @@ function ThemeEditor() {
 
   const handleTextColorChange = (color, changeType) => {
     cookies.set(`${changeType}-color`, color, { path: "/" });
+    changeType === "text" ? setActiveTextColor(color) : setActiveThemeColor(color);
 
     let themeColors = document.documentElement.classList.value.split(" ");
     for (let i = 0; i < themeColors.length; i++) {
@@ -55,7 +58,7 @@ function ThemeEditor() {
               {themeTextColors.map((color) => (
                 <div
                   key={color}
-                  className={`text-color ${color}`}
+                  className={activeTextColor === color ? `text-color ${color} active` : `text-color ${color}`}
                   onClick={() => handleTextColorChange(color, "text")}
                 ></div>
               ))}
@@ -66,7 +69,7 @@ function ThemeEditor() {
               {themeColors.map((color) => (
                 <div
                   key={color}
-                  className={`theme-color ${color}`}
+                  className={activeThemeColor === color ? `theme-color ${color} active` : `theme-color ${color}`}
                   onClick={() => handleTextColorChange(color, "theme")}
                 >
                   <span>{color.replace("-", " ")}</span>
