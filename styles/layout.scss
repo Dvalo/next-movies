@@ -87,6 +87,8 @@ main {
 
         .nav-icon {
             font-size: 30px;
+            width: 30px;
+            height: 30px;
         }
 
         span {
@@ -161,10 +163,15 @@ main {
         padding: 50px;
     }
     .showcase-inner {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap: 15px;
-        row-gap: 15px;
+        display: flex;
+        flex-direction: column;
+
+        .showcase-inner-items {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            column-gap: 15px;
+            row-gap: 15px;
+        }
     }
 }
 .showcase-main {
