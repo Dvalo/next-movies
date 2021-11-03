@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../layout/Layout";
 import { Container } from "react-bootstrap";
@@ -13,55 +15,63 @@ import CastSlider from "../../components/CastSlider";
 function MovieSingle({ movieDetails, movieCredits }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
   return (
-    <Layout>
-      <div className="showcase-single">
-        <div className="showcase-image">
-          <Image
-            src={`${BASE_URL}${
-              movieDetailsDummy[0].backdrop_path ||
-              movieDetailsDummy[0].poster_path
-            }`}
-            alt={movieDetailsDummy[0].original_title}
-            layout="responsive"
-            objectFit="cover"
-            height={690}
-            width={1920}
-          />
-          <div className="showcase-details-wrapper">
+    <>
+      <Head>
+        <title>
+          {movieDetailsDummy[0].title} (
+          {new Date(movieDetailsDummy[0].release_date).getFullYear()})
+        </title>
+      </Head>
+      <Layout>
+        <div className="showcase-single">
+          <div className="showcase-image">
+            <Image
+              src={`${BASE_URL}${
+                movieDetailsDummy[0].backdrop_path ||
+                movieDetailsDummy[0].poster_path
+              }`}
+              alt={movieDetailsDummy[0].original_title}
+              layout="responsive"
+              objectFit="cover"
+              height={690}
+              width={1920}
+            />
+            <div className="showcase-details-wrapper">
+              <Container className="px-5" fluid>
+                <div className="showcase-title">
+                  {movieDetailsDummy[0].original_title}
+                </div>
+                <div className="showcase-details">
+                  <div className="showcase-date">
+                    {new Date(movieDetailsDummy[0].release_date).toDateString()}
+                  </div>
+                  <div className="showcase-length">
+                    {Math.floor(movieDetailsDummy[0].runtime / 60)}hr{" "}
+                    {movieDetailsDummy[0].runtime % 60}min
+                  </div>
+                </div>
+                <div className="showcase-genres">
+                  {movieDetailsDummy[0].genres.map((genre) => (
+                    <Link href={`/movies/${genre.name.toLocaleLowerCase()}`} key={genre.id}>
+                      <a className="showcase-genre">{genre.name}</a>
+                    </Link>
+                  ))}
+                </div>
+                <div className="showcase-desc">
+                  {movieDetailsDummy[0].overview}
+                </div>
+              </Container>
+            </div>
+          </div>
+          <div className="showcase-complete-details">
             <Container className="px-5" fluid>
-              <div className="showcase-title">
-                {movieDetailsDummy[0].original_title}
-              </div>
-              <div className="showcase-details">
-                <div className="showcase-date">
-                  {new Date(movieDetailsDummy[0].release_date).toDateString()}
-                </div>
-                <div className="showcase-length">
-                  {Math.floor(movieDetailsDummy[0].runtime / 60)}hr{" "}
-                  {movieDetailsDummy[0].runtime % 60}min
-                </div>
-              </div>
-              <div className="showcase-genres">
-                {movieDetailsDummy[0].genres.map((genre) => (
-                  <a href="#" className="showcase-genre" key={genre.id}>
-                    {genre.name}
-                  </a>
-                ))}
-              </div>
-              <div className="showcase-desc">
-                {movieDetailsDummy[0].overview}
-              </div>
+              <h1 className="sect-title">Popular cast</h1>
+              <CastSlider cast={castDummy} />
             </Container>
           </div>
         </div>
-        <div className="showcase-complete-details">
-          <Container className="px-5" fluid>
-            <h1 className="sect-title">Popular cast</h1>
-            <CastSlider cast={castDummy} />
-          </Container>
-        </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 }
 

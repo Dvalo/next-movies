@@ -6,7 +6,7 @@ function Searchbar() {
   return (
     <div className="secondary-searchbar">
       <div className="secondary-logo">
-        <a href="https://www.themoviedb.org/" target="_blank" rel="noreferrer">
+        <a className="d-flex" href="https://www.themoviedb.org/" target="_blank" rel="noreferrer">
           <Image
             src="/logo.svg"
             alt="TMDB"
@@ -29,7 +29,7 @@ function Searchbar() {
           id="search"
           name="search"
           autoComplete="off"
-          placeholder="Search something here..."
+          placeholder="Search for a movie, tv show, actor..."
         />
       </form>
     </div>

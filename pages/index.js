@@ -14,7 +14,7 @@ export default function Home({ movies }) {
   return (
     <>
       <Head>
-        <title>Movies App - Next.js</title>
+        <title>Trending Movies</title>
         <meta name="description" content="Movies App made with Next.js" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

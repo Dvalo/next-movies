@@ -195,6 +195,7 @@
             font-size: 13px;
             font-weight: 500;
             z-index: 99;
+            color: #fff;
             transition: 0.3s ease-in-out;
         }
         .showcase-language,
@@ -231,6 +232,7 @@
         font-size: 20px;
         font-weight: 600;
         color: var(--theme-primary-highlight);
+        text-decoration: none;
     }
 }
 

@@ -116,9 +116,15 @@ main {
     align-items: center;
     height: 100px;
     background: var(--theme-primary);
+    border-bottom: 1px solid $border-light;
 }
 
 .mov-searchbar {
+    background: var(--theme-primary-darker);
+    padding: 20px;
+    margin-left: 30px;
+    border-radius: 8px;
+
     input,
     button {
         outline: none;
@@ -130,6 +136,7 @@ main {
         color: var(--theme-text-color);
         font-size: 14px;
         font-weight: 500;
+        min-width: 300px;
 
         &::placeholder {
             color: var(--theme-text-color);

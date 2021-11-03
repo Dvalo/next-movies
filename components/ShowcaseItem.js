@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Thumbnail from "./Thumbnail";
 
 function ShowcaseItem({ item }) {
@@ -5,7 +6,9 @@ function ShowcaseItem({ item }) {
     <div className="showcase-item">
       <Thumbnail item={item} />
       <div className="showcase-desc">{item.overview}</div>
-      <div className="showcase-title">{item.title}</div>
+      <Link href={`/movie/${item.id}`}>
+        <a className="showcase-title">{item.title}</a>
+      </Link>
     </div>
   );
 }
