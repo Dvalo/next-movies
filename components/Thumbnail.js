@@ -11,10 +11,16 @@ function Thumbnail({ item }) {
           <div className="showcase-language">{item.original_language}</div>
           <div className="showcase-certification">{item.adult ? "R" : "G"}</div>
           <div className="showcase-year">
-            {new Date(item.release_date).getFullYear()}
+            {item.release_date
+              ? new Date(item.release_date).getFullYear()
+              : "UNK"}
           </div>
           <Image
-            src={`${BASE_URL}${item.backdrop_path || item.poster_path}`}
+            src={
+              !item.backdrop_path && !item.poster_path
+                ? `/placeholder.jpg`
+                : `${BASE_URL}${item.backdrop_path || item.poster_path}`
+            }
             alt={item.original_title}
             layout="responsive"
             objectFit="cover"
