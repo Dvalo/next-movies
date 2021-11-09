@@ -85,7 +85,9 @@ function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
           </div>
           <div className="showcase-complete-details">
             <Container className="px-5" fluid>
-              <h1 className="sect-title">Popular cast</h1>
+              <h1 className="sect-title">
+                <span>Popular</span> cast
+              </h1>
               <CastSlider cast={castDummy} />
             </Container>
           </div>
