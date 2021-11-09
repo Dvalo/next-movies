@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Preview
 
 ##### homepage slider
-![Homepage Slider](https://i.imgur.com/lW6oPuZ.gif)
+![Homepage Slider](https://i.imgur.com/rYVZOn8.gif)
 
 ##### movie details page (movie details)
 ![Theme Editor](https://i.imgur.com/hXYcvI9.png)
