@@ -105,4 +105,13 @@ export function fetchMovieVideosById(id) {
 export function discoverMoviesByGenre(genre) {
   return `/discover/movie?api_key=${API_KEY}&with_genres=${movieGenreIds[genre].id}`;
 }
+
+export function fetchActorDetails(actorId) {
+  return `/person/${actorId}?api_key=${API_KEY}`;
+}
+
+export function fetchActorCombinedCredits(actorId) {
+  return `/person/${actorId}/combined_credits?api_key=${API_KEY}`;
+}
+
 // https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
