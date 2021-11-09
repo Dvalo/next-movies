@@ -60,11 +60,9 @@ export async function fetchActorDetails(actorId) {
 }
 
 export async function fetchActorCombinedCredits(actorId) {
-  const actorCombinedCredits = await fetch(
+  return await fetch(
     `${API_PATH}/person/${actorId}/combined_credits?api_key=${API_KEY}`
   ).then((res) => res.json());
-
-  return actorCombinedCredits;
 }
 
 // https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US

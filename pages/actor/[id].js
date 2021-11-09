@@ -1,13 +1,40 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../../layout/Layout";
 import { Container } from "react-bootstrap";
-import { actorDetailsDummy, actorCreditsDummy } from "../../utils/dummy";
-import { fetchActorCombinedCredits, fetchActorDetails } from "../../utils/requests";
+import {
+  actorDetailsDummy,
+  actorCreditsDummy,
+  actorsDummy,
+} from "../../utils/dummy";
+import {
+  fetchActorCombinedCredits,
+  fetchActorDetails,
+} from "../../utils/requests";
 import ShowcaseItem from "../../components/ShowcaseItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 function MovieSingle({ actorDetails, actorCredits }) {
+  const [allCredits, setAllCredits] = useState(actorCredits);
+  const [currentPage, setCurrentPage] = useState(2);
+  const [currentCredits, setCurrentCredits] = useState(allCredits.slice(0, 20));
+  const [loadMore, setLoadMore] = useState(true);
   const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
+
+  useEffect(() => {
+    if (
+      currentCredits.length === allCredits.slice(0, currentPage * 20).length
+    ) {
+      setLoadMore(false);
+    }
+  }, [currentCredits]);
+
+  function loadMoreItems() {
+    setCurrentPage(currentPage + 1);
+    setCurrentCredits(allCredits.slice(0, currentPage * 20));
+  }
 
   return (
     <>
@@ -49,7 +76,7 @@ function MovieSingle({ actorDetails, actorCredits }) {
               </h1>
               <div className="item-showcase showcase-inner">
                 <div className="showcase-inner-items">
-                  {actorCreditsDummy.map((movie) => (
+                  {currentCredits.map((movie) => (
                     <ShowcaseItem
                       item={movie}
                       descType="character"
@@ -58,6 +85,18 @@ function MovieSingle({ actorDetails, actorCredits }) {
                     />
                   ))}
                 </div>
+                {loadMore && (
+                  <div
+                    className="load-more btn btn-red btn-w-icon"
+                    onClick={loadMoreItems}
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowAltCircleDown}
+                      className="icon icon-load-more"
+                    />
+                    Load More
+                  </div>
+                )}
               </div>
             </div>
           </Container>
@@ -76,14 +115,12 @@ export async function getServerSideProps(context) {
   //   `https://api.themoviedb.org/3${fetchActorDetails(actorId)}`
   // ).then((res) => res.json());
 
-  // const actorCreditsReq = await fetch(
-  //   `https://api.themoviedb.org/3${fetchActorCombinedCredits(actorId)}`
-  // ).then((res) => res.json());
+  // const actorCredits = await fetchActorCombinedCredits(actorId);
 
   return {
     props: {
       actorDetails: "dummy",
-      actorCredits: "dummy",
+      actorCredits: actorCreditsDummy,
     },
   };
 }

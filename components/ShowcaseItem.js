@@ -6,10 +6,10 @@ function ShowcaseItem({ item, descType, path }) {
     <div className="showcase-item">
       <Thumbnail item={item} path={path} />
       <div className="showcase-desc">
-        {descType === "movie" ? item.overview : `Played as: ${item.character}`}
+        {descType === "movie" ? item.overview : (item.character ? `Played as: ${item.character}` : item.overview)}
       </div>
       <Link href={`/${path}/${item.id}`}>
-        <a className="showcase-title">{item.title}</a>
+        <a className="showcase-title">{item.title || item.name}</a>
       </Link>
     </div>
   );
