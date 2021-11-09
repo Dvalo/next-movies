@@ -86,6 +86,8 @@ export const requests = {
   },
 };
 
+const API_PATH = "https://api.themoviedb.org/3";
+
 export function fetchTrendingMovies() {
   return `/trending/movie/week?api_key=${API_KEY}`;
 }
@@ -106,12 +108,35 @@ export function discoverMoviesByGenre(genre) {
   return `/discover/movie?api_key=${API_KEY}&with_genres=${movieGenreIds[genre].id}`;
 }
 
-export function fetchActorDetails(actorId) {
-  return `/person/${actorId}?api_key=${API_KEY}`;
+/**
+ * Tv shows
+ */
+
+export async function fetchTrendingTvShows() {
+  const trendingTvShows = await fetch(
+    `${API_PATH}/tv/popular?api_key=${API_KEY}`
+  ).then((res) => res.json());
+  return trendingTvShows;
 }
 
-export function fetchActorCombinedCredits(actorId) {
-  return `/person/${actorId}/combined_credits?api_key=${API_KEY}`;
+/**
+ * Actors
+ */
+
+export async function fetchActorDetails(actorId) {
+  const actorDetails = await fetch(
+    `${API_PATH}/person/${actorId}?api_key=${API_KEY}`
+  ).then((res) => res.json());
+
+  return actorDetails;
+}
+
+export async function fetchActorCombinedCredits(actorId) {
+  const actorCombinedCredits = await fetch(
+    `${API_PATH}/person/${actorId}/combined_credits?api_key=${API_KEY}`
+  ).then((res) => res.json());
+
+  return actorCombinedCredits;
 }
 
 // https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
