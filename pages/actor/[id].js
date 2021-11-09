@@ -53,6 +53,7 @@ function MovieSingle({ actorDetails, actorCredits }) {
                     <ShowcaseItem
                       item={movie}
                       descType="character"
+                      path={movie.media_type}
                       key={movie.id}
                     />
                   ))}

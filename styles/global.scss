@@ -70,6 +70,20 @@
 
 
 // Buttons
+.btn {
+    &.btn-w-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        .icon {
+            margin-top: -2px;
+            margin-right: 12px;
+        }
+    }
+}
 .btn-red {
     @include button-variant($btn-red, $btn-red);
 }

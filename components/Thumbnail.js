@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-function Thumbnail({ item }) {
+function Thumbnail({ item, path }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original";
 
   return (
-    <Link href={`/movie/${item.id}`}>
+    <Link href={`/${path}/${item.id}`}>
       <a>
         <div className="showcase-img">
           <div className="showcase-language">{item.original_language}</div>

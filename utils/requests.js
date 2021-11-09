@@ -22,9 +22,9 @@ export function fetchMovieVideosById(id) {
  * Discover
  */
 
-export async function discoverMoviesByGenre(genreId) {
+export async function discoverMoviesByGenre(genreId, page = 1) {
   return await fetch(
-    `${API_PATH}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}`
+    `${API_PATH}/discover/movie?api_key=${process.env.API_KEY}&with_genres=${genreId}&page=${page}`
   ).then((res) => res.json());
 }
 

@@ -20,7 +20,12 @@ function TvShows({ tvshows }) {
           <GenreFilter filterType="tvshows" />
           <section className="item-showcase showcase-main">
             {tvshows.map((movie) => (
-              <ShowcaseItem item={movie} descType="movie" key={movie.id} />
+              <ShowcaseItem
+                item={movie}
+                descType="movie"
+                path="tv"
+                key={movie.id}
+              />
             ))}
           </section>
         </Container>

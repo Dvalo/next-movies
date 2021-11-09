@@ -23,7 +23,12 @@ function TvShowsGenre({ genre, results }) {
 
               <div className="showcase-inner-items">
                 {results.map((movie) => (
-                  <ShowcaseItem item={movie} descType="movie" key={movie.id} />
+                  <ShowcaseItem
+                    item={movie}
+                    descType="movie"
+                    path="tv"
+                    key={movie.id}
+                  />
                 ))}
               </div>
             </div>
