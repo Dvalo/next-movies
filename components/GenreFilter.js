@@ -1,4 +1,3 @@
-import React from "react";
 import { movieGenres, tvGenres } from "../utils/utils";
 
 function GenreFilter({ filterType }) {
@@ -9,11 +8,7 @@ function GenreFilter({ filterType }) {
       <div className="filters-wrapper">
         <div className="filters-wrapper-inner">
           {filterThrough.map(({ name, id }) => (
-            <a
-              href={`/${filterType}/${id}`}
-              className="filter"
-              key={id}
-            >
+            <a href={`/${filterType}/${id}`} className="filter" key={id}>
               {name}
             </a>
           ))}
