@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { movieGenreIds } from "../utils/requests";
+import { movieGenres } from "../utils/utils";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -61,20 +61,14 @@ function MainSlider({ slides }) {
               <Container>
                 <div className="movie-title">{slide.title}</div>
                 <div className="movie-genre-wrapper">
-                  {slide.genre_ids.map((genre) => {
-                    for (var i = 0; i < movieGenreIds.length; i++) {
-                      if (genre === movieGenreIds[i].id) {
-                        return (
-                          <div
-                            className="movie-genre"
-                            key={movieGenreIds[i].id}
-                          >
-                            {movieGenreIds[i].name}
-                          </div>
-                        );
+                  {slide.genre_ids.map((genre) => (
+                    <div className="movie-genre" key={genre}>
+                      {
+                        movieGenres.find((currGenre) => currGenre.id === genre)
+                          .name
                       }
-                    }
-                  })}
+                    </div>
+                  ))}
                 </div>
               </Container>
             </div>

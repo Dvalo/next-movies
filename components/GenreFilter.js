@@ -8,7 +8,7 @@ function GenreFilter() {
         <div className="filters-wrapper-inner">
           {movieGenres.map(({ name, id }) => (
             <a
-              href={`/movies/${removeSpaces(name)}`}
+              href={`/movies/${id}`}
               className="filter"
               key={id}
             >
