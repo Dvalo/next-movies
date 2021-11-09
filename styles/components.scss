@@ -17,6 +17,7 @@
             height: 100%;
             background: rgb(0 0 0 / 35%);
             filter: drop-shadow(2px 4px 6px black);
+            z-index: 9;
         }
 
         .intro-slide-inner {
@@ -38,6 +39,7 @@
             top: 0;
             color: #fff;
             line-height: initial;
+            z-index: 9;
         }
         .movie-title {
             font-weight: bold;
@@ -329,9 +331,38 @@
     }
 }
 
+.showcase-actor {
+    font-family: $font-opensans;
+
+    .actor-wrapper {
+        display: flex;
+    }
+    .actor-details {
+        flex: 1;
+        margin-left: 30px;
+
+        span {
+            // font-size: 14px;
+            margin-right: 15px;
+        }
+
+        .actor-name {
+            font-size: 60px;
+            color: var(--theme-primary-highlight);
+        }
+
+        .actor-detail {
+            margin-bottom: 15px;
+        }
+    }
+}
+
 .cast-slider {
     .cast-slide {
         padding: 0 10px;
+        text-decoration: none;
+        color: var(--theme-text-color);
+
         img {
             height: auto;
             width: 100%;
