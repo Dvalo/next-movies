@@ -359,16 +359,14 @@
 }
 
 .cast-slider {
-    .cast-slide {
+
+    .actor-item {
+        display: flex;
+        flex-direction: column;
         padding: 0 10px;
         text-decoration: none;
         color: var(--theme-text-color);
 
-        img {
-            height: auto;
-            width: 100%;
-            object-fit: cover;
-        }
         .cast-details {
             margin-top: 10px;
         }
@@ -559,5 +557,59 @@
         &.light-gray {
             background: linear-gradient(45deg, #3a3a3a 0%, #505050 100%);
         }
+    }
+}
+
+// nprogress
+#nprogress {
+    pointer-events: none;
+
+    .bar {
+        background: var(--theme-primary-highlight);
+        position: fixed;
+        z-index: 1031;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    .peg {
+        position: absolute;
+        display: block;
+        right: 0px;
+        width: 100px;
+        height: 100%;
+        opacity: 1;
+        box-shadow: 0 0 10px var(--theme-primary-highlight), 0 0 5px var(--theme-primary-highlight);
+        transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    .spinner {
+        display: block;
+        position: fixed;
+        z-index: 1031;
+        top: 15px;
+        right: 15px;
+    }
+
+    .spinner-icon {
+        width: 18px;
+        height: 18px;
+        border: solid 2px transparent;
+        border-top-color: var(--theme-primary-highlight);
+        border-left-color: var(--theme-primary-highlight);
+        border-radius: 50%;
+        animation: nprogress-spinner 400ms linear infinite;
+    }
+}
+  
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+
+    #nprogress .spinner,
+    #nprogress .bar {
+        position: absolute;
     }
 }
