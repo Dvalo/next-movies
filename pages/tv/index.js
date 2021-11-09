@@ -17,7 +17,7 @@ function TvShows({ tvshows }) {
       <MainLayout>
         <MainSlider slides={tvshows.slice(0, 4)} />
         <Container>
-          <GenreFilter />
+          <GenreFilter filterType="tvshows" />
           <section className="item-showcase showcase-main">
             {tvshows.map((movie) => (
               <ShowcaseItem item={movie} descType="movie" key={movie.id} />

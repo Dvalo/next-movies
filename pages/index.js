@@ -1,11 +1,7 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
 import { Container } from "react-bootstrap";
 import MainSlider from "../components/MainSlider";
 import ShowcaseItem from "../components/ShowcaseItem";
-import { movieGenres, removeSpaces } from "../utils/utils";
 import { dummy } from "../utils/dummy";
 import { fetchTrendingMovies } from "../utils/requests";
 import MainLayout from "../layout/MainLayout";
@@ -23,7 +19,7 @@ export default function Home({ movies }) {
       <MainLayout>
         <MainSlider slides={movies.slice(0, 4)} />
         <Container>
-          <GenreFilter />
+          <GenreFilter filterType="movies" />
           <section className="item-showcase showcase-main">
             {movies.map((movie) => (
               <ShowcaseItem item={movie} descType="movie" key={movie.id} />

@@ -1,14 +1,16 @@
 import React from "react";
-import { movieGenres, removeSpaces } from "../utils/utils";
+import { movieGenres, tvGenres } from "../utils/utils";
 
-function GenreFilter() {
+function GenreFilter({ filterType }) {
+  const filterThrough = filterType === "movies" ? movieGenres : tvGenres;
+
   return (
     <div className="filters">
       <div className="filters-wrapper">
         <div className="filters-wrapper-inner">
-          {movieGenres.map(({ name, id }) => (
+          {filterThrough.map(({ name, id }) => (
             <a
-              href={`/movies/${id}`}
+              href={`/${filterType}/${id}`}
               className="filter"
               key={id}
             >
