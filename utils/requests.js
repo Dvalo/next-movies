@@ -123,6 +123,14 @@ export async function fetchTrendingTvShows() {
  * Actors
  */
 
+export async function fetchTrendingActors() {
+  const trendingActors = await fetch(
+    `${API_PATH}/person/popular?api_key=${API_KEY}`
+  ).then((res) => res.json());
+  
+  return trendingActors;
+}
+
 export async function fetchActorDetails(actorId) {
   const actorDetails = await fetch(
     `${API_PATH}/person/${actorId}?api_key=${API_KEY}`

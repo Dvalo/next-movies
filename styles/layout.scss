@@ -171,6 +171,31 @@ main {
             grid-template-columns: repeat(3, minmax(0, 1fr));
             column-gap: 15px;
             row-gap: 15px;
+
+            &--actors {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+
+                .actor-item {
+                    font-family: $font-opensans;
+                    color: var(--theme-text-color);
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: 0.15s ease-in-out;
+
+                    img {
+                        transition: 0.15s ease-in-out;
+                    }
+
+                    &:hover {
+                        letter-spacing: 1px;
+                        color: var(--theme-primary-highlight);
+                        
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
         }
     }
 }
