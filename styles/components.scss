@@ -288,6 +288,10 @@
             &:hover {
                 background: var(--theme-primary-darker);
             }
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
         }
     }
     .showcase-length {

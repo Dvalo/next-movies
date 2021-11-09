@@ -2,20 +2,32 @@ const API_KEY = process.env.API_KEY;
 
 const API_PATH = "https://api.themoviedb.org/3";
 
-export function fetchTrendingMovies() {
-  return `/trending/movie/week?api_key=${API_KEY}`;
+/**
+ * Movies
+ */
+
+export async function fetchTrendingMovies() {
+  return await fetch(`${API_PATH}/trending/movie/week?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
 }
 
-export function fetchMovieDetailsById(id) {
-  return `/movie/${id}?api_key=${API_KEY}`;
+export async function fetchMovieDetailsById(id) {
+  return await fetch(`${API_PATH}/movie/${id}?api_key=${API_KEY}`).then((res) =>
+    res.json()
+  );
 }
 
-export function fetchMovieCreditsById(id) {
-  return `/movie/${id}/credits?api_key=${API_KEY}`;
+export async function fetchMovieCreditsById(id) {
+  return await fetch(`${API_PATH}/movie/${id}/credits?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
 }
 
-export function fetchMovieVideosById(id) {
-  return `/movie/${id}/videos?api_key=${API_KEY}`;
+export async function fetchMovieVideosById(id) {
+  return await fetch(`${API_PATH}/movie/${id}/videos?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
 }
 
 /**
@@ -47,7 +59,7 @@ export async function fetchTrendingActors() {
   const trendingActors = await fetch(
     `${API_PATH}/person/popular?api_key=${API_KEY}`
   ).then((res) => res.json());
-  
+
   return trendingActors;
 }
 

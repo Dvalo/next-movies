@@ -19,7 +19,7 @@ function CastSlider({ cast }) {
 
   return (
     <Slider className="cast-slider" {...settings}>
-      {cast[0].cast.slice(0, 20).map((castMember) => (
+      {cast.slice(0, 20).map((castMember) => (
         <ActorItem actor={castMember} character={true} key={castMember.id} />
       ))}
     </Slider>

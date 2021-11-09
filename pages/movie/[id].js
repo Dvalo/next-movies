@@ -3,20 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../layout/Layout";
 import { Container } from "react-bootstrap";
+import MovieTrailer from "../../components/MovieTrailer";
+import CastSlider from "../../components/CastSlider";
 import {
-  movieDetailsDummy,
-  castDummy,
-  movieVideosDummy,
-} from "../../utils/dummy";
-import {
-  discoverMoviesByGenre,
   fetchMovieCreditsById,
   fetchMovieDetailsById,
   fetchMovieVideosById,
-  requests,
 } from "../../utils/requests";
-import MovieTrailer from "../../components/MovieTrailer";
-import CastSlider from "../../components/CastSlider";
 
 function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
@@ -25,8 +18,8 @@ function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
     <>
       <Head>
         <title>
-          {movieDetailsDummy[0].title} (
-          {new Date(movieDetailsDummy[0].release_date).getFullYear()})
+          {movieDetails.title} (
+          {new Date(movieDetails.release_date).getFullYear()})
         </title>
       </Head>
       <Layout>
@@ -34,10 +27,9 @@ function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
           <div className="showcase-image">
             <Image
               src={`${BASE_URL}${
-                movieDetailsDummy[0].backdrop_path ||
-                movieDetailsDummy[0].poster_path
+                movieDetails.backdrop_path || movieDetails.poster_path
               }`}
-              alt={movieDetailsDummy[0].original_title}
+              alt={movieDetails.original_title}
               layout="responsive"
               objectFit="cover"
               height={690}
@@ -46,33 +38,28 @@ function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
             <div className="showcase-details-wrapper">
               <Container className="px-5" fluid>
                 <div className="showcase-title">
-                  {movieDetailsDummy[0].original_title}
+                  {movieDetails.original_title}
                 </div>
                 <div className="showcase-details">
                   <div className="showcase-date">
-                    {new Date(movieDetailsDummy[0].release_date).toDateString()}
+                    {new Date(movieDetails.release_date).toDateString()}
                   </div>
                   <div className="showcase-length">
-                    {Math.floor(movieDetailsDummy[0].runtime / 60)}hr{" "}
-                    {movieDetailsDummy[0].runtime % 60}min
+                    {Math.floor(movieDetails.runtime / 60)}hr{" "}
+                    {movieDetails.runtime % 60}min
                   </div>
                 </div>
                 <div className="showcase-genres">
-                  {movieDetailsDummy[0].genres.map((genre) => (
-                    <Link
-                      href={`/movies/${genre.name.toLocaleLowerCase()}`}
-                      key={genre.id}
-                    >
+                  {movieDetails.genres.map((genre) => (
+                    <Link href={`/movies/${genre.id}`} key={genre.id}>
                       <a className="showcase-genre">{genre.name}</a>
                     </Link>
                   ))}
                 </div>
-                <div className="showcase-desc">
-                  {movieDetailsDummy[0].overview}
-                </div>
+                <div className="showcase-desc">{movieDetails.overview}</div>
                 <div className="showcase-trailer-wrapper">
-                  {movieVideosDummy[0].results &&
-                    movieVideosDummy[0].results.map((video, index) => (
+                  {movieVideos.results &&
+                    movieVideos.results.map((video, index) => (
                       <MovieTrailer
                         trailer={video}
                         index={index}
@@ -88,7 +75,7 @@ function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
               <h1 className="sect-title">
                 <span>Popular</span> cast
               </h1>
-              <CastSlider cast={castDummy} />
+              <CastSlider cast={movieCredits.cast} />
             </Container>
           </div>
         </div>
@@ -102,23 +89,15 @@ export default MovieSingle;
 export async function getServerSideProps(context) {
   const movieId = context.query.id;
 
-  // const movieDetailsReq = await fetch(
-  //   `https://api.themoviedb.org/3${fetchMovieDetailsById(movieId)}`
-  // ).then((res) => res.json());
-
-  // const movieCreditsReq = await fetch(
-  //   `https://api.themoviedb.org/3${fetchMovieCreditsById(movieId)}`
-  // ).then((res) => res.json());
-
-  // const movieVideosReq = await fetch(
-  //   `https://api.themoviedb.org/3${fetchMovieVideosById(movieId)}`
-  // ).then((res) => res.json());
+  const movieDetails = await fetchMovieDetailsById(movieId);
+  const movieCredits = await fetchMovieCreditsById(movieId);
+  const movieVideos = await fetchMovieVideosById(movieId);
 
   return {
     props: {
-      movieDetails: "dummy",
-      movieCredits: "dummy1",
-      movieVideos: "dummy2",
+      movieDetails: movieDetails,
+      movieCredits: movieCredits,
+      movieVideos: movieVideos,
     },
   };
 }
