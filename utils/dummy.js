@@ -1,3 +1,1426 @@
+export const actorsDummy = [
+    {
+        page: 1,
+        results: [
+        {
+        adult: false,
+        gender: 1,
+        id: 229396,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/lSCKo6QGJ88Gn3espNnvL87CinA.jpg",
+        genre_ids: [
+        28,
+        80,
+        18
+        ],
+        id: 483906,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Polar",
+        overview: "When a retiring assassin realizes that he is the target of a hit, he winds up back in the game going head to head with a gang of younger, ruthless killers.",
+        poster_path: "/qOBEpKVLl8Q9CZScbOcRRVISezV.jpg",
+        release_date: "2019-01-25",
+        title: "Polar",
+        video: false,
+        vote_average: 6.3,
+        vote_count: 1625
+        },
+        {
+        adult: false,
+        backdrop_path: "/lxLiKYM4laorYKMxyaWrSVbLIjr.jpg",
+        genre_ids: [
+        28,
+        53,
+        35,
+        80
+        ],
+        id: 796499,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Army of Thieves",
+        overview: "A mysterious woman recruits bank teller Ludwig Dieter to lead a group of aspiring thieves on a top-secret heist during the early stages of the zombie apocalypse.",
+        poster_path: "/iPTZGFmPs7HsXHYxiuxGolihjOH.jpg",
+        release_date: "2021-10-29",
+        title: "Army of Thieves",
+        video: false,
+        vote_average: 6.9,
+        vote_count: 499
+        },
+        {
+        adult: false,
+        backdrop_path: "/ozDVHQRk0UU0SYYAan8qF18VGba.jpg",
+        genre_ids: [
+        10749,
+        878
+        ],
+        id: 59457,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Womb",
+        overview: "A woman's consuming love forces her to bear the clone of her dead beloved. From his infancy to manhood, she faces the unavoidable complexities of her controversial decision.",
+        poster_path: "/w98sx8jPYWeRZORdmgkmDMcBFuH.jpg",
+        release_date: "2010-07-15",
+        title: "Womb",
+        video: false,
+        vote_average: 6.1,
+        vote_count: 262
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Ruby O. Fee",
+        popularity: 82.689,
+        profile_path: "/gEesm5OBmyCS75hBPQNF0ueavoU.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 2961420,
+        known_for: [
+        {
+        adult: false,
+        genre_ids: [
+        10402,
+        18,
+        10749
+        ],
+        id: 528137,
+        media_type: "movie",
+        original_language: "uk",
+        original_title: "Давай танцюй",
+        overview: "",
+        poster_path: "/py7JQxFR7zatjGlwewTwcJxxtvH.jpg",
+        release_date: "2019-03-21",
+        title: "Let's Dance",
+        video: false,
+        vote_average: 6.5,
+        vote_count: 5
+        },
+        {
+        first_air_date: "2018-01-15",
+        genre_ids: [
+        18
+        ],
+        id: 79473,
+        media_type: "tv",
+        name: "School",
+        origin_country: [
+        "UA"
+        ],
+        original_language: "uk",
+        original_name: "Школа",
+        overview: "When successful businesswoman Katya's daughter tries to commit suicide, she becomes an economics teacher in order to be closer to her daughter and understand what the kids are up to at school. At the same time, Alex, a new English teacher, former lawyer, son of the principal, and newly engaged, also comes to the school. As sparks begin between Katya and Alex, the skeletons of the past still haunt them and won't let our heroes go.",
+        poster_path: "/6ffYIlp3bS3OcHH550nm7PhCwvG.jpg",
+        vote_average: 9,
+        vote_count: 1
+        },
+        {
+        adult: false,
+        genre_ids: [
+        27
+        ],
+        id: 681255,
+        media_type: "movie",
+        original_language: "uk",
+        original_title: "В Чорній, Чорній Кімнаті",
+        overview: "Somewhere not far from the capital, in a county town, three teenagers discover the lost archaeological digging site of a pagan shrine. Following that, a series of terrifying and unexplainable events happen in the environs. An enigmatic history teacher, who has appeared in the town recently, is set to solve the problems.",
+        poster_path: "/vvce3SNbD5v7l34YC51KIe7eCde.jpg",
+        release_date: "2020-03-26",
+        title: "In a Dark, Dark Room",
+        video: false,
+        vote_average: 0,
+        vote_count: 0
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Yelyzaveta Vasylenko",
+        popularity: 56.785,
+        profile_path: "/8QLI5g6HvQyPwqf7HyATSHR9y0p.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 933238,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/lrNKm3HNvGdZoAfiBKu7b04FLHN.jpg",
+        genre_ids: [
+        18
+        ],
+        id: 316029,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "The Greatest Showman",
+        overview: "The story of American showman P.T. Barnum, founder of the circus that became the famous traveling Ringling Bros. and Barnum & Bailey Circus.",
+        poster_path: "/b9CeobiihCx1uG1tpw8hXmpi7nm.jpg",
+        release_date: "2017-12-20",
+        title: "The Greatest Showman",
+        video: false,
+        vote_average: 8,
+        vote_count: 7722
+        },
+        {
+        adult: false,
+        backdrop_path: "/eR20N1flPCQyp9HzpxlTcxgDAO7.jpg",
+        genre_ids: [
+        28,
+        12
+        ],
+        id: 177677,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Mission: Impossible - Rogue Nation",
+        overview: "Ethan and team take on their most impossible mission yet—eradicating 'The Syndicate', an International and highly-skilled rogue organisation committed to destroying the IMF.",
+        poster_path: "/fRJLXQBHK2wyznK5yZbO7vmsuVK.jpg",
+        release_date: "2015-07-23",
+        title: "Mission: Impossible - Rogue Nation",
+        video: false,
+        vote_average: 7.2,
+        vote_count: 6983
+        },
+        {
+        adult: false,
+        backdrop_path: "/aw4FOsWr2FY373nKSxbpNi3fz4F.jpg",
+        genre_ids: [
+        28,
+        12
+        ],
+        id: 353081,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Mission: Impossible - Fallout",
+        overview: "When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfill his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.",
+        poster_path: "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
+        release_date: "2018-07-13",
+        title: "Mission: Impossible - Fallout",
+        video: false,
+        vote_average: 7.4,
+        vote_count: 6210
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Rebecca Ferguson",
+        popularity: 42.24,
+        profile_path: "/6NRlV9oUipeak7r00V6k73Jb7we.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 12835,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/ko4N6wWp0UYlMmsVyfIfLyRAZtP.jpg",
+        genre_ids: [
+        28,
+        878,
+        12
+        ],
+        id: 118340,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Guardians of the Galaxy",
+        overview: "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
+        poster_path: "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+        release_date: "2014-07-30",
+        title: "Guardians of the Galaxy",
+        video: false,
+        vote_average: 7.9,
+        vote_count: 23308
+        },
+        {
+        adult: false,
+        backdrop_path: "/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg",
+        genre_ids: [
+        12,
+        28,
+        878
+        ],
+        id: 299536,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Avengers: Infinity War",
+        overview: "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+        poster_path: "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+        release_date: "2018-04-25",
+        title: "Avengers: Infinity War",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 22996
+        },
+        {
+        adult: false,
+        backdrop_path: "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        genre_ids: [
+        12,
+        878,
+        28
+        ],
+        id: 299534,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Avengers: Endgame",
+        overview: "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+        poster_path: "/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+        release_date: "2019-04-24",
+        title: "Avengers: Endgame",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 19409
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Vin Diesel",
+        popularity: 40.309,
+        profile_path: "/9uxTwqB8anAiPomB6Kqm6A73VTV.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 97576,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/8Qsr8pvDL3s1jNZQ4HK1d1Xlvnh.jpg",
+        genre_ids: [
+        12,
+        14
+        ],
+        id: 259316,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Fantastic Beasts and Where to Find Them",
+        overview: "In 1926, Newt Scamander arrives at the Magical Congress of the United States of America with a magically expanded briefcase, which houses a number of dangerous creatures and their habitats. When the creatures escape from the briefcase, it sends the American wizarding authorities after Newt, and threatens to strain even further the state of magical and non-magical relations.",
+        poster_path: "/h6NYfVUyM6CDURtZSnBpz647Ldd.jpg",
+        release_date: "2016-11-16",
+        title: "Fantastic Beasts and Where to Find Them",
+        video: false,
+        vote_average: 7.4,
+        vote_count: 15763
+        },
+        {
+        adult: false,
+        backdrop_path: "/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg",
+        genre_ids: [
+        28,
+        12,
+        878
+        ],
+        id: 299537,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Captain Marvel",
+        overview: "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+        poster_path: "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+        release_date: "2019-03-06",
+        title: "Captain Marvel",
+        video: false,
+        vote_average: 6.9,
+        vote_count: 12128
+        },
+        {
+        adult: false,
+        backdrop_path: "/1n00NlOGRFZVs8coBxyZLm5l4EC.jpg",
+        genre_ids: [
+        28,
+        12,
+        878,
+        14
+        ],
+        id: 335988,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Transformers: The Last Knight",
+        overview: "Autobots and Decepticons are at war, with humans on the sidelines. Optimus Prime is gone. The key to saving our future lies buried in the secrets of the past, in the hidden history of Transformers on Earth.",
+        poster_path: "/s5HQf2Gb3lIO2cRcFwNL9sn1o1o.jpg",
+        release_date: "2017-06-16",
+        title: "Transformers: The Last Knight",
+        video: false,
+        vote_average: 6.1,
+        vote_count: 4696
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Gemma Chan",
+        popularity: 38.122,
+        profile_path: "/lm2FKwj2zO8ZsqMNFHm4KMtlNlM.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 1136406,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg",
+        genre_ids: [
+        12,
+        28,
+        878
+        ],
+        id: 299536,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Avengers: Infinity War",
+        overview: "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+        poster_path: "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+        release_date: "2018-04-25",
+        title: "Avengers: Infinity War",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 23023
+        },
+        {
+        adult: false,
+        backdrop_path: "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        genre_ids: [
+        12,
+        878,
+        28
+        ],
+        id: 299534,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Avengers: Endgame",
+        overview: "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+        poster_path: "/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+        release_date: "2019-04-24",
+        title: "Avengers: Endgame",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 19429
+        },
+        {
+        adult: false,
+        backdrop_path: "/kvRT3GwcnqGHzPjXIVrVPhUix7Z.jpg",
+        genre_ids: [
+        12,
+        28,
+        878
+        ],
+        id: 271110,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Captain America: Civil War",
+        overview: "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+        poster_path: "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+        release_date: "2016-04-27",
+        title: "Captain America: Civil War",
+        video: false,
+        vote_average: 7.4,
+        vote_count: 18794
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Tom Holland",
+        popularity: 37.619,
+        profile_path: "/ip7aXVH8s6wXv8cY6KI14OZgCI8.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 2524,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+        genre_ids: [
+        28,
+        878,
+        12
+        ],
+        id: 27205,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Inception",
+        overview: "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: inception, the implantation of another person's idea into a target's subconscious.",
+        poster_path: "/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+        release_date: "2010-07-15",
+        title: "Inception",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 30150
+        },
+        {
+        adult: false,
+        backdrop_path: "/nlCHUWjY9XWbuEUQauCBgnY8ymF.jpg",
+        genre_ids: [
+        28,
+        12,
+        878
+        ],
+        id: 76341,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Mad Max: Fury Road",
+        overview: "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order.",
+        poster_path: "/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg",
+        release_date: "2015-05-13",
+        title: "Mad Max: Fury Road",
+        video: false,
+        vote_average: 7.5,
+        vote_count: 18575
+        },
+        {
+        adult: false,
+        backdrop_path: "/cKPfiu9IcCW0fMdKdQBXe3PRtTZ.jpg",
+        genre_ids: [
+        28,
+        80,
+        18,
+        53
+        ],
+        id: 49026,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "The Dark Knight Rises",
+        overview: "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy.",
+        poster_path: "/vzvKcPQ4o7TjWeGIn0aGC9FeVNu.jpg",
+        release_date: "2012-07-16",
+        title: "The Dark Knight Rises",
+        video: false,
+        vote_average: 7.8,
+        vote_count: 18503
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Tom Hardy",
+        popularity: 36.837,
+        profile_path: "/sGMA6pA2D6X0gun49igJT3piHs3.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 18918,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/zJDMuXQDraHjtF53wikmyBQIcYe.jpg",
+        genre_ids: [
+        12,
+        28,
+        35,
+        14
+        ],
+        id: 353486,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Jumanji: Welcome to the Jungle",
+        overview: "The tables are turned as four teenagers are sucked into Jumanji's world - pitted against rhinos, black mambas and an endless variety of jungle traps and puzzles. To survive, they'll play as characters from the game.",
+        poster_path: "/pSgXKPU5h6U89ipF7HBYajvYt7j.jpg",
+        release_date: "2017-12-09",
+        title: "Jumanji: Welcome to the Jungle",
+        video: false,
+        vote_average: 6.8,
+        vote_count: 11151
+        },
+        {
+        adult: false,
+        backdrop_path: "/oWU6dgu3RgdSZElkhbZuoPtkWAJ.jpg",
+        genre_ids: [
+        12,
+        35,
+        10751,
+        16
+        ],
+        id: 277834,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Moana",
+        overview: "In Ancient Polynesia, when a terrible curse incurred by Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the demigod to set things right.",
+        poster_path: "/4JeejGugONWpJkbnvL12hVoYEDa.jpg",
+        release_date: "2016-11-23",
+        title: "Moana",
+        video: false,
+        vote_average: 7.6,
+        vote_count: 9890
+        },
+        {
+        adult: false,
+        backdrop_path: "/mRfI3y2oAd7ejur2di09xC9niqp.jpg",
+        genre_ids: [
+        28,
+        53,
+        80
+        ],
+        id: 82992,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Fast & Furious 6",
+        overview: "Hobbs has Dominic and Brian reassemble their crew to take down a team of mercenaries: Dominic unexpectedly gets convoluted also facing his presumed deceased girlfriend, Letty.",
+        poster_path: "/n31VRDodbaZxkrZmmzyYSFNVpW5.jpg",
+        release_date: "2013-05-21",
+        title: "Fast & Furious 6",
+        video: false,
+        vote_average: 6.8,
+        vote_count: 8969
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Dwayne Johnson",
+        popularity: 36.296,
+        profile_path: "/cgoy7t5Ve075naBPcewZrc08qGw.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 31,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/qdIMHd4sEfJSckfVJfKQvisL02a.jpg",
+        genre_ids: [
+        35,
+        18,
+        10749
+        ],
+        id: 13,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Forrest Gump",
+        overview: "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+        poster_path: "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+        release_date: "1994-07-06",
+        title: "Forrest Gump",
+        video: false,
+        vote_average: 8.5,
+        vote_count: 21510
+        },
+        {
+        adult: false,
+        backdrop_path: "/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+        genre_ids: [
+        16,
+        12,
+        10751,
+        35
+        ],
+        id: 862,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Toy Story",
+        overview: "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+        poster_path: "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+        release_date: "1995-10-30",
+        title: "Toy Story",
+        video: false,
+        vote_average: 8,
+        vote_count: 14630
+        },
+        {
+        adult: false,
+        backdrop_path: "/l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
+        genre_ids: [
+        14,
+        18,
+        80
+        ],
+        id: 497,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "The Green Mile",
+        overview: "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution.",
+        poster_path: "/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+        release_date: "1999-12-10",
+        title: "The Green Mile",
+        video: false,
+        vote_average: 8.5,
+        vote_count: 12986
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Tom Hanks",
+        popularity: 36.049,
+        profile_path: "/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 1368507,
+        known_for: [
+        {
+        backdrop_path: "/zXpSJLcczUt6EfbdULZanguzy87.jpg",
+        first_air_date: "2013-09-23",
+        genre_ids: [
+        18,
+        80,
+        9648
+        ],
+        id: 46952,
+        media_type: "tv",
+        name: "The Blacklist",
+        origin_country: [
+        "US"
+        ],
+        original_language: "en",
+        original_name: "The Blacklist",
+        overview: "Raymond Red Reddington, one of the FBI's most wanted fugitives, surrenders in person at FBI Headquarters in Washington, D.C. He claims that he and the FBI have the same interests: bringing down dangerous criminals and terrorists. In the last two decades, he's made a list of criminals and terrorists that matter the most but the FBI cannot find because it does not know they exist. Reddington calls this The Blacklist. Reddington will co-operate, but insists that he will speak only to Elizabeth Keen, a rookie FBI profiler.",
+        poster_path: "/htJzeRcYI2ewMm4PTrg98UMXShe.jpg",
+        vote_average: 7.5,
+        vote_count: 2150
+        },
+        {
+        backdrop_path: "/gDmGiZ9iCxUPrdZ7dyNwSPJtFmf.jpg",
+        first_air_date: "2011-10-23",
+        genre_ids: [
+        18,
+        10765
+        ],
+        id: 39272,
+        media_type: "tv",
+        name: "Once Upon a Time",
+        origin_country: [
+        "US"
+        ],
+        original_language: "en",
+        original_name: "Once Upon a Time",
+        overview: "There is a town in Maine where every story book character you've ever known is trapped between two worlds, victims of a powerful curse. Only one knows the truth and only one can break the spell. Emma Swan is a 28-year-old bail bonds collector who has been supporting herself since she was abandoned as a baby. Things change for her when her son Henry, whom she abandoned years ago, finds her and asks for her help explaining that she is from a different world where she is Snow White's missing daughter.",
+        poster_path: "/49qD372jeHUTmdNMGJkjCFZdv9y.jpg",
+        vote_average: 7.2,
+        vote_count: 1529
+        },
+        {
+        adult: false,
+        backdrop_path: "/zETkzgle7c6wAeW11snnVUBp67S.jpg",
+        genre_ids: [
+        27,
+        53
+        ],
+        id: 599975,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Countdown",
+        overview: "A young nurse downloads an app that tells her she only has three days to live. With time ticking away and a mysterious figure haunting her, she must find a way to save her life before time runs out.",
+        poster_path: "/qCDPKUMX5xrxxQY8XhGVCKO3fks.jpg",
+        release_date: "2019-10-24",
+        title: "Countdown",
+        video: false,
+        vote_average: 6.4,
+        vote_count: 1381
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Elizabeth Lail",
+        popularity: 34.386,
+        profile_path: "/lDYjEyqojUs2sF3CgdsOZ9vr2KL.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 976,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/mRfI3y2oAd7ejur2di09xC9niqp.jpg",
+        genre_ids: [
+        28,
+        53,
+        80
+        ],
+        id: 82992,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Fast & Furious 6",
+        overview: "Hobbs has Dominic and Brian reassemble their crew to take down a team of mercenaries: Dominic unexpectedly gets convoluted also facing his presumed deceased girlfriend, Letty.",
+        poster_path: "/n31VRDodbaZxkrZmmzyYSFNVpW5.jpg",
+        release_date: "2013-05-21",
+        title: "Fast & Furious 6",
+        video: false,
+        vote_average: 6.8,
+        vote_count: 8961
+        },
+        {
+        adult: false,
+        backdrop_path: "/gyCHdpyPXmp7rqxE10nlImkzRo9.jpg",
+        genre_ids: [
+        28,
+        53,
+        80,
+        12
+        ],
+        id: 168259,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Furious 7",
+        overview: "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+        poster_path: "/wurKlC3VKUgcfsn0K51MJYEleS2.jpg",
+        release_date: "2015-04-01",
+        title: "Furious 7",
+        video: false,
+        vote_average: 7.3,
+        vote_count: 8737
+        },
+        {
+        adult: false,
+        backdrop_path: "/jzdnhRhG0dsuYorwvSqPqqnM1cV.jpg",
+        genre_ids: [
+        28,
+        80,
+        53
+        ],
+        id: 337339,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "The Fate of the Furious",
+        overview: "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+        poster_path: "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg",
+        release_date: "2017-04-12",
+        title: "The Fate of the Furious",
+        video: false,
+        vote_average: 6.9,
+        vote_count: 8584
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Jason Statham",
+        popularity: 34.025,
+        profile_path: "/lldeQ91GwIVff43JBrpdbAAeYWj.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 10859,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/n28I7FNYIT934OoHhKZn4IIDsrQ.jpg",
+        genre_ids: [
+        28,
+        12,
+        35
+        ],
+        id: 293660,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Deadpool",
+        overview: "Deadpool tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.",
+        poster_path: "/fSRb7vyIP8rQpL0I47P3qUsEKX3.jpg",
+        release_date: "2016-02-09",
+        title: "Deadpool",
+        video: false,
+        vote_average: 7.6,
+        vote_count: 25711
+        },
+        {
+        adult: false,
+        backdrop_path: "/3P52oz9HPQWxcwHOwxtyrVV1LKi.jpg",
+        genre_ids: [
+        28,
+        35,
+        12
+        ],
+        id: 383498,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Deadpool 2",
+        overview: "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.",
+        poster_path: "/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+        release_date: "2018-05-10",
+        title: "Deadpool 2",
+        video: false,
+        vote_average: 7.5,
+        vote_count: 13876
+        },
+        {
+        adult: false,
+        backdrop_path: "/nEcEy7iVOh04dzZWP2e6AcwpLvI.jpg",
+        genre_ids: [
+        35,
+        14
+        ],
+        id: 72105,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Ted",
+        overview: "John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear or his girlfriend, Lori.",
+        poster_path: "/2ZetTSYM8ATcrxh4Otge99GJRTz.jpg",
+        release_date: "2012-06-29",
+        title: "Ted",
+        video: false,
+        vote_average: 6.4,
+        vote_count: 10136
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Ryan Reynolds",
+        popularity: 32.775,
+        profile_path: "/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 224513,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/bMdSmfI0qwpAkvhAL7sqpjmwgf4.jpg",
+        genre_ids: [
+        878,
+        18
+        ],
+        id: 335984,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Blade Runner 2049",
+        overview: "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years.",
+        poster_path: "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+        release_date: "2017-10-04",
+        title: "Blade Runner 2049",
+        video: false,
+        vote_average: 7.5,
+        vote_count: 10095
+        },
+        {
+        adult: false,
+        backdrop_path: "/4HWAQu28e2yaWrtupFPGFkdNU7V.jpg",
+        genre_ids: [
+        35,
+        18,
+        80,
+        9648
+        ],
+        id: 546554,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Knives Out",
+        overview: "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death.",
+        poster_path: "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+        release_date: "2019-11-27",
+        title: "Knives Out",
+        video: false,
+        vote_average: 7.9,
+        vote_count: 7987
+        },
+        {
+        adult: false,
+        backdrop_path: "/oNoprEND25zXR6Fns8cIZUkuoMc.jpg",
+        genre_ids: [
+        35,
+        80,
+        18
+        ],
+        id: 308266,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "War Dogs",
+        overview: "Based on the true story of two young men, David Packouz and Efraim Diveroli, who won a $300 million contract from the Pentagon to arm America's allies in Afghanistan.",
+        poster_path: "/mDcPRjZC1bb6LavFU3gwsWdVfCM.jpg",
+        release_date: "2016-08-17",
+        title: "War Dogs",
+        video: false,
+        vote_average: 6.9,
+        vote_count: 3630
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Ana de Armas",
+        popularity: 32.648,
+        profile_path: "/14uxt0jH28J9zn4vNQNTae3Bmr7.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 85,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/jOh79POQu4hyVIseUxdQxTW7vOf.jpg",
+        genre_ids: [
+        12,
+        14,
+        28
+        ],
+        id: 22,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Pirates of the Caribbean: The Curse of the Black Pearl",
+        overview: "Jack Sparrow, a freewheeling 18th-century pirate, quarrels with a rival pirate bent on pillaging Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her.",
+        poster_path: "/z8onk7LV9Mmw6zKz4hT6pzzvmvl.jpg",
+        release_date: "2003-07-09",
+        title: "Pirates of the Caribbean: The Curse of the Black Pearl",
+        video: false,
+        vote_average: 7.8,
+        vote_count: 16597
+        },
+        {
+        adult: false,
+        backdrop_path: "/8Qsr8pvDL3s1jNZQ4HK1d1Xlvnh.jpg",
+        genre_ids: [
+        12,
+        14
+        ],
+        id: 259316,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Fantastic Beasts and Where to Find Them",
+        overview: "In 1926, Newt Scamander arrives at the Magical Congress of the United States of America with a magically expanded briefcase, which houses a number of dangerous creatures and their habitats. When the creatures escape from the briefcase, it sends the American wizarding authorities after Newt, and threatens to strain even further the state of magical and non-magical relations.",
+        poster_path: "/h6NYfVUyM6CDURtZSnBpz647Ldd.jpg",
+        release_date: "2016-11-16",
+        title: "Fantastic Beasts and Where to Find Them",
+        video: false,
+        vote_average: 7.4,
+        vote_count: 15763
+        },
+        {
+        adult: false,
+        backdrop_path: "/8zfRLCgKrLAc5SSnACz8ZqmeKAP.jpg",
+        genre_ids: [
+        12,
+        14,
+        28
+        ],
+        id: 58,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Pirates of the Caribbean: Dead Man's Chest",
+        overview: "Captain Jack Sparrow works his way out of a blood debt with the ghostly Davy Jones to avoid eternal damnation.",
+        poster_path: "/l3peI54mf6Z9EBSvS3hnRmOBbFT.jpg",
+        release_date: "2006-07-06",
+        title: "Pirates of the Caribbean: Dead Man's Chest",
+        video: false,
+        vote_average: 7.3,
+        vote_count: 12728
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Johnny Depp",
+        popularity: 32.246,
+        profile_path: "/ilPBHd3r3ahlipNQtjr4E3G04jJ.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 1251069,
+        known_for: [
+        {
+        backdrop_path: "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
+        first_air_date: "2011-04-17",
+        genre_ids: [
+        10765,
+        18,
+        10759
+        ],
+        id: 1399,
+        media_type: "tv",
+        name: "Game of Thrones",
+        origin_country: [
+        "US"
+        ],
+        original_language: "en",
+        original_name: "Game of Thrones",
+        overview: "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+        poster_path: "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+        vote_average: 8.4,
+        vote_count: 16261
+        },
+        {
+        adult: false,
+        backdrop_path: "/gyCHdpyPXmp7rqxE10nlImkzRo9.jpg",
+        genre_ids: [
+        28,
+        53,
+        80,
+        12
+        ],
+        id: 168259,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Furious 7",
+        overview: "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+        poster_path: "/wurKlC3VKUgcfsn0K51MJYEleS2.jpg",
+        release_date: "2015-04-01",
+        title: "Furious 7",
+        video: false,
+        vote_average: 7.3,
+        vote_count: 8746
+        },
+        {
+        adult: false,
+        backdrop_path: "/jzdnhRhG0dsuYorwvSqPqqnM1cV.jpg",
+        genre_ids: [
+        28,
+        80,
+        53
+        ],
+        id: 337339,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "The Fate of the Furious",
+        overview: "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+        poster_path: "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg",
+        release_date: "2017-04-12",
+        title: "The Fate of the Furious",
+        video: false,
+        vote_average: 6.9,
+        vote_count: 8590
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Nathalie Emmanuel",
+        popularity: 32.141,
+        profile_path: "/722FrTqERFzH7Sra9SLgr8CLqws.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 109513,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/mMoG4nPSDupXIXOwVvpexZY2W0N.jpg",
+        genre_ids: [
+        28,
+        18,
+        53
+        ],
+        id: 254128,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "San Andreas",
+        overview: "In the aftermath of a massive earthquake in California, a rescue-chopper pilot makes a dangerous journey across the state in order to rescue his estranged daughter.",
+        poster_path: "/2Gfjn962aaFSD6eST6QU3oLDZTo.jpg",
+        release_date: "2015-05-27",
+        title: "San Andreas",
+        video: false,
+        vote_average: 6.2,
+        vote_count: 6863
+        },
+        {
+        adult: false,
+        backdrop_path: "/6QmX2BDVr1hIOIPHqnxvp1C1ZZp.jpg",
+        genre_ids: [
+        35,
+        28,
+        80
+        ],
+        id: 339846,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Baywatch",
+        overview: "Devoted lifeguard Mitch Buchannon butts heads with a brash new recruit. Together, they uncover a local criminal plot that threatens the future of the Bay.",
+        poster_path: "/6HE4xd8zloDqmjMZuhUCCw2UcY1.jpg",
+        release_date: "2017-05-12",
+        title: "Baywatch",
+        video: false,
+        vote_average: 6.1,
+        vote_count: 6651
+        },
+        {
+        adult: false,
+        backdrop_path: "/sEyNWq9985lyUrwayWnvicT4FHA.jpg",
+        genre_ids: [
+        12,
+        14,
+        10751
+        ],
+        id: 32657,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Percy Jackson & the Olympians: The Lightning Thief",
+        overview: "Accident prone teenager, Percy discovers he's actually a demi-God, the son of Poseidon, and he is needed when Zeus' lightning is stolen. Percy must master his new found skills in order to prevent a war between the Gods that could devastate the entire world.",
+        poster_path: "/nmyrUTjmvZ3OQYZJrUKAoiBfMq5.jpg",
+        release_date: "2010-02-01",
+        title: "Percy Jackson & the Olympians: The Lightning Thief",
+        video: false,
+        vote_average: 6.2,
+        vote_count: 6005
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Alexandra Daddario",
+        popularity: 31.784,
+        profile_path: "/netqGkeTEPtyMBdpMWophvK3y7N.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 62716,
+        known_for: [
+        {
+        backdrop_path: "/qZtAf4Z1lazGQoYVXiHOrvLr5lI.jpg",
+        first_air_date: "2017-01-26",
+        genre_ids: [
+        9648,
+        18,
+        80
+        ],
+        id: 69050,
+        media_type: "tv",
+        name: "Riverdale",
+        origin_country: [
+        "US"
+        ],
+        original_language: "en",
+        original_name: "Riverdale",
+        overview: "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade.",
+        poster_path: "/wRbjVBdDo5qHAEOVYoMWpM58FSA.jpg",
+        vote_average: 8.6,
+        vote_count: 12068
+        },
+        {
+        backdrop_path: "/ccaZ3yyyC6rcMAQrlLZ51FpahNO.jpg",
+        first_air_date: "2016-01-25",
+        genre_ids: [
+        80,
+        10765
+        ],
+        id: 63174,
+        media_type: "tv",
+        name: "Lucifer",
+        origin_country: [
+        "US"
+        ],
+        original_language: "en",
+        original_name: "Lucifer",
+        overview: "Bored and unhappy as the Lord of Hell, Lucifer Morningstar abandoned his throne and retired to Los Angeles, where he has teamed up with LAPD detective Chloe Decker to take down criminals. But the longer he's away from the underworld, the greater the threat that the worst of humanity could escape.",
+        poster_path: "/ekZobS8isE6mA53RAiGDG93hBxL.jpg",
+        vote_average: 8.5,
+        vote_count: 10910
+        },
+        {
+        adult: false,
+        backdrop_path: "/pvxmYJcgrLiYC6G2IQTn1PPNems.jpg",
+        genre_ids: [
+        28,
+        12,
+        878
+        ],
+        id: 14161,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "2012",
+        overview: "Dr. Adrian Helmsley, part of a worldwide geophysical team investigating the effect on the earth of radiation from unprecedented solar storms, learns that the earth's core is heating up. He warns U.S. President Thomas Wilson that the crust of the earth is becoming unstable and that without proper preparations for saving a fraction of the world's population, the entire race is doomed. Meanwhile, writer Jackson Curtis stumbles on the same information. While the world's leaders race to build arks to escape the impending cataclysm, Curtis struggles to find a way to save his family. Meanwhile, volcanic eruptions and earthquakes of unprecedented strength wreak havoc around the world.",
+        poster_path: "/8i1xFqcItT6GKEbY6VDbFnxe7sJ.jpg",
+        release_date: "2009-10-10",
+        title: "2012",
+        video: false,
+        vote_average: 5.8,
+        vote_count: 9980
+        }
+        ],
+        known_for_department: "Acting",
+        name: "B. J. Harrison",
+        popularity: 31.058,
+        profile_path: "/wKQzk78i0nCdSASDFwma0z1tZsv.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 505710,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/tTlAA0REGPXSZPBfWyTW9ipIv1I.jpg",
+        genre_ids: [
+        28,
+        12,
+        878,
+        18
+        ],
+        id: 315635,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Spider-Man: Homecoming",
+        overview: "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+        poster_path: "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+        release_date: "2017-07-05",
+        title: "Spider-Man: Homecoming",
+        video: false,
+        vote_average: 7.4,
+        vote_count: 17060
+        },
+        {
+        adult: false,
+        backdrop_path: "/ng6SSB3JhbcpKTwbPDsRwUYK8Cq.jpg",
+        genre_ids: [
+        28,
+        12,
+        878
+        ],
+        id: 429617,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Spider-Man: Far From Home",
+        overview: "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+        poster_path: "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+        release_date: "2019-06-28",
+        title: "Spider-Man: Far From Home",
+        video: false,
+        vote_average: 7.5,
+        vote_count: 10886
+        },
+        {
+        adult: false,
+        backdrop_path: "/lrNKm3HNvGdZoAfiBKu7b04FLHN.jpg",
+        genre_ids: [
+        18
+        ],
+        id: 316029,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "The Greatest Showman",
+        overview: "The story of American showman P.T. Barnum, founder of the circus that became the famous traveling Ringling Bros. and Barnum & Bailey Circus.",
+        poster_path: "/b9CeobiihCx1uG1tpw8hXmpi7nm.jpg",
+        release_date: "2017-12-20",
+        title: "The Greatest Showman",
+        video: false,
+        vote_average: 8,
+        vote_count: 7723
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Zendaya",
+        popularity: 30.349,
+        profile_path: "/r3A7ev7QkjOGocVn3kQrJ0eOouk.jpg"
+        },
+        {
+        adult: false,
+        gender: 2,
+        id: 6193,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+        genre_ids: [
+        28,
+        878,
+        12
+        ],
+        id: 27205,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Inception",
+        overview: "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: inception, the implantation of another person's idea into a target's subconscious.",
+        poster_path: "/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+        release_date: "2010-07-15",
+        title: "Inception",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 30166
+        },
+        {
+        adult: false,
+        backdrop_path: "/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+        genre_ids: [
+        18,
+        37
+        ],
+        id: 68718,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Django Unchained",
+        overview: "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+        poster_path: "/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+        release_date: "2012-12-25",
+        title: "Django Unchained",
+        video: false,
+        vote_average: 8.1,
+        vote_count: 21472
+        },
+        {
+        adult: false,
+        backdrop_path: "/6VmFqApQRyZZzmiGOQq2C92jyvH.jpg",
+        genre_ids: [
+        18,
+        10749
+        ],
+        id: 597,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Titanic",
+        overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé. Meanwhile, Jack Dawson and Fabrizio De Rossi win third-class tickets aboard the ship. Rose tells the whole story from Titanic's departure through to its death—on its first and last voyage—on April 15, 1912.",
+        poster_path: "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+        release_date: "1997-11-18",
+        title: "Titanic",
+        video: false,
+        vote_average: 7.9,
+        vote_count: 19989
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Leonardo DiCaprio",
+        popularity: 29.891,
+        profile_path: "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+        },
+        {
+        adult: false,
+        gender: 1,
+        id: 1245,
+        known_for: [
+        {
+        adult: false,
+        backdrop_path: "/nNmJRkg8wWnRmzQDe2FwKbPIsJV.jpg",
+        genre_ids: [
+        878,
+        28,
+        12
+        ],
+        id: 24428,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "The Avengers",
+        overview: "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+        poster_path: "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+        release_date: "2012-04-25",
+        title: "The Avengers",
+        video: false,
+        vote_average: 7.7,
+        vote_count: 25637
+        },
+        {
+        adult: false,
+        backdrop_path: "/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg",
+        genre_ids: [
+        12,
+        28,
+        878
+        ],
+        id: 299536,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Avengers: Infinity War",
+        overview: "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+        poster_path: "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+        release_date: "2018-04-25",
+        title: "Avengers: Infinity War",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 23023
+        },
+        {
+        adult: false,
+        backdrop_path: "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        genre_ids: [
+        12,
+        878,
+        28
+        ],
+        id: 299534,
+        media_type: "movie",
+        original_language: "en",
+        original_title: "Avengers: Endgame",
+        overview: "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+        poster_path: "/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+        release_date: "2019-04-24",
+        title: "Avengers: Endgame",
+        video: false,
+        vote_average: 8.3,
+        vote_count: 19429
+        }
+        ],
+        known_for_department: "Acting",
+        name: "Scarlett Johansson",
+        popularity: 29.637,
+        profile_path: "/mODcczqQyKuphfFAoBZGhxgnNfs.jpg"
+        }
+        ],
+        total_pages: 500,
+        total_results: 10000
+        }
+]
+
 export const actorDetailsDummy = [
     {
         adult: false,
