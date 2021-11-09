@@ -26,7 +26,7 @@ export default function Home({ movies }) {
           <GenreFilter />
           <section className="item-showcase showcase-main">
             {movies.map((movie) => (
-              <ShowcaseItem item={movie} key={movie.id} />
+              <ShowcaseItem item={movie} descType="movie" key={movie.id} />
             ))}
           </section>
         </Container>
