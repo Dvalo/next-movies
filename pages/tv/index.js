@@ -1,25 +1,27 @@
 import Head from "next/head";
 import { Container } from "react-bootstrap";
+import MainLayout from "../../layout/MainLayout";
 import GenreFilter from "../../components/GenreFilter";
 import MainSlider from "../../components/MainSlider";
 import ShowcaseItem from "../../components/ShowcaseItem";
-import MainLayout from "../../layout/MainLayout";
 import { fetchTrendingTvShows } from "../../utils/requests";
-
-import { dummy } from "../../utils/dummy";
+import { filterValidMovieItems } from "../../utils/helpers";
 
 function TvShows({ tvshows }) {
+  const tvShowsResults = tvshows.results;
+  const tvShowsSlides = filterValidMovieItems(tvShowsResults).slice(0, 5);
+
   return (
     <>
       <Head>
         <title>Trending TV Shows</title>
       </Head>
       <MainLayout>
-        <MainSlider slides={tvshows.slice(0, 4)} />
+        <MainSlider slides={tvShowsSlides} type="tvshows" />
         <Container>
           <GenreFilter filterType="tvshows" />
           <section className="item-showcase showcase-main">
-            {tvshows.map((movie) => (
+            {tvShowsResults.map((movie) => (
               <ShowcaseItem
                 item={movie}
                 descType="movie"
@@ -37,11 +39,11 @@ function TvShows({ tvshows }) {
 export default TvShows;
 
 export async function getServerSideProps(context) {
-  // const trendingTvShows = fetchTrendingTvShows();
+  const trendingTvShows = await fetchTrendingTvShows();
 
   return {
     props: {
-      tvshows: dummy,
+      tvshows: trendingTvShows,
     },
   };
 }

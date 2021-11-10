@@ -1,13 +1,16 @@
 import Head from "next/head";
 import { Container } from "react-bootstrap";
+import MainLayout from "../layout/MainLayout";
 import MainSlider from "../components/MainSlider";
 import ShowcaseItem from "../components/ShowcaseItem";
-import { dummy } from "../utils/dummy";
-import { fetchTrendingMovies } from "../utils/requests";
-import MainLayout from "../layout/MainLayout";
 import GenreFilter from "../components/GenreFilter";
+import { fetchTrendingMovies } from "../utils/requests";
+import { filterValidMovieItems } from "../utils/helpers";
 
 export default function Home({ movies }) {
+  const moviesResults = movies.results;
+  const moviesSlides = filterValidMovieItems(moviesResults).slice(0, 5);
+
   return (
     <>
       <Head>
@@ -17,11 +20,11 @@ export default function Home({ movies }) {
       </Head>
 
       <MainLayout>
-        <MainSlider slides={movies.slice(0, 4)} />
+        <MainSlider slides={moviesSlides} type="movies" />
         <Container>
           <GenreFilter filterType="movies" />
           <section className="item-showcase showcase-main">
-            {movies.map((movie) => (
+            {moviesResults.map((movie) => (
               <ShowcaseItem
                 item={movie}
                 descType="movie"
@@ -37,13 +40,11 @@ export default function Home({ movies }) {
 }
 
 export async function getServerSideProps(context) {
-  // const request = await fetch(
-  //   `https://api.themoviedb.org/3${fetchTrendingMovies}`
-  // ).then((res) => res.json());
+  const trendingMovies = await fetchTrendingMovies();
 
   return {
     props: {
-      movies: dummy,
+      movies: trendingMovies,
     },
   };
 }
