@@ -36,22 +36,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 `paths`
 ###### Movies
-*/* - homepage displays current trending movies *(dummy data currently)*
+*/* - homepage displays current trending movies
 
-*/movies/[genreID]* - page that displays movies based on the given genre *(dummy data currently)*
+*/movies/[genreID]* - page that displays movies based on the given genre
 
-*/movie/[movieID]* - page that displays details about movie, including popular cast *(real data)*
+*/movie/[movieID]* - page that displays details about movie, including popular cast
 
 ###### TV Shows
-*/tv* - page that displays current trending TV Shows *(dummy data currently)*
+*/tv* - page that displays current trending TV Shows
 
-*/tvshows/[genreID]* - page that displays TV Shows based on the given genre *(dummy data currently)*
+*/tvshows/[genreID]* - page that displays TV Shows based on the given genre
 
 */tv/[tvShowID]* - TBA
 
 ###### Actors
-*/actors* - page that displays current trending actors *(real data)*
+*/actors* - page that displays current trending actors
 
-*/actor/[actorID]* - page that displays information about actor and what they are known for *(real data)*
+*/actor/[actorID]* - page that displays information about actor and what they are known for
 
 More details - TBA
