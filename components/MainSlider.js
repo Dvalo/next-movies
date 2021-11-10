@@ -3,13 +3,14 @@ import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { movieGenres } from "../utils/utils";
+import { movieGenres, tvGenres } from "../utils/utils";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function MainSlider({ slides }) {
+function MainSlider({ slides, type }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
+  const sliderType = type === "movies" ? movieGenres : tvGenres;
 
   function NextArrow(props) {
     const { className, onClick } = props;
@@ -46,6 +47,7 @@ function MainSlider({ slides }) {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
   return (
     <Slider className="intro-slider" {...settings}>
       {slides.map((slide) => (
@@ -59,13 +61,12 @@ function MainSlider({ slides }) {
             />
             <div className="movie-detail-wrapper">
               <Container>
-                <div className="movie-title">{slide.title}</div>
+                <div className="movie-title">{slide.title || slide.name || slide.original_name}</div>
                 <div className="movie-genre-wrapper">
-                  {slide.genre_ids.map((genre) => (
+                  {slide.genre_ids.length && slide.genre_ids.map((genre) => (
                     <div className="movie-genre" key={genre}>
                       {
-                        movieGenres.find((currGenre) => currGenre.id === genre)
-                          .name
+                        sliderType.find((currGenre) => currGenre.id === genre).name
                       }
                     </div>
                   ))}
