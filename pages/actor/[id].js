@@ -10,9 +10,10 @@ import {
   fetchActorCombinedCredits,
   fetchActorDetails,
 } from "../../utils/requests";
+import { sortByDate } from "../../utils/helpers";
 
 function MovieSingle({ actorDetails, actorCredits }) {
-  const [allCredits, setAllCredits] = useState(actorCredits.cast);
+  const [allCredits, setAllCredits] = useState(sortByDate(actorCredits.cast, true));
   const [currentPage, setCurrentPage] = useState(2);
   const [currentCredits, setCurrentCredits] = useState(allCredits.slice(0, 20));
   const [loadMore, setLoadMore] = useState(true);
