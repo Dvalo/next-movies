@@ -59,7 +59,7 @@ function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
                 <div className="showcase-desc">{movieDetails.overview}</div>
                 <div className="showcase-trailer-wrapper">
                   {movieVideos.results &&
-                    movieVideos.results.map((video, index) => (
+                    movieVideos.results.slice(0, 6).map((video, index) => (
                       <MovieTrailer
                         trailer={video}
                         index={index}
