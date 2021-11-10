@@ -20,7 +20,7 @@ function MovieGenre({ genre, genreMovies }) {
     if (currentMovies.length === allMovies.slice(0, currentPage * 20).length) {
       setLoadMore(false);
     }
-  }, [currentMovies]);
+  }, [allMovies, currentMovies, currentPage]);
 
   function loadMoreItems() {
     setCurrentMovies(allMovies.slice(0, currentPage * 20));

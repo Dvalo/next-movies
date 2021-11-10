@@ -7,9 +7,9 @@ const API_PATH = "https://api.themoviedb.org/3";
  */
 
 export async function fetchTrendingMovies() {
-  return await fetch(`${API_PATH}/trending/movie/week?api_key=${API_KEY}`).then(
-    (res) => res.json()
-  );
+  return await fetch(
+    `${API_PATH}/trending/movie/week?api_key=${API_KEY}`
+  ).then((res) => res.json());
 }
 
 export async function fetchMovieDetailsById(id) {
@@ -45,10 +45,9 @@ export async function discoverMoviesByGenre(genreId, page = 1) {
  */
 
 export async function fetchTrendingTvShows() {
-  const trendingTvShows = await fetch(
+  return await fetch(
     `${API_PATH}/tv/popular?api_key=${API_KEY}`
   ).then((res) => res.json());
-  return trendingTvShows;
 }
 
 /**
