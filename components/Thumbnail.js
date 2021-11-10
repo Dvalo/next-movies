@@ -11,8 +11,8 @@ function Thumbnail({ item, path }) {
           <div className="showcase-language">{item.original_language}</div>
           <div className="showcase-certification">{item.adult ? "R" : "G"}</div>
           <div className="showcase-year">
-            {item.release_date
-              ? new Date(item.release_date).getFullYear()
+            {item.release_date || item.first_air_date
+              ? new Date(item.release_date || item.first_air_date).getFullYear()
               : "UNK"}
           </div>
           <Image
