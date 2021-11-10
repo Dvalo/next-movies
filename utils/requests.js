@@ -36,7 +36,13 @@ export async function fetchMovieVideosById(id) {
 
 export async function discoverMoviesByGenre(genreId, page = 1) {
   return await fetch(
-    `${API_PATH}/discover/movie?api_key=${process.env.API_KEY}&with_genres=${genreId}&page=${page}`
+    `${API_PATH}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&page=${page}`
+  ).then((res) => res.json());
+}
+
+export async function discoverTvShowsByGenre(genreId, page = 1) {
+  return await fetch(
+    `${API_PATH}/discover/tv?api_key=${API_KEY}&with_genres=${genreId}&page=${page}`
   ).then((res) => res.json());
 }
 

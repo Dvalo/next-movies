@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Layout from "../../layout/Layout";
 import { Container } from "react-bootstrap";
-import { dummy } from "../../utils/dummy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { discoverMoviesByGenre } from "../../utils/requests";
@@ -78,23 +77,27 @@ export async function getServerSideProps(context) {
    * prefetch multiple pages to avoid API key visibility on fetch call on load more button
    * Temporary
    */
-  const pagesToFetch = 10;
-  // const getMoviesByPageCount = async (page = 1) => {
-  //   const query = await discoverMoviesByGenre(genre, page);
-  //   const data = query.results;
+  const pagesToFetch = 6;
+  const getMoviesByPageCount = async (page = 1) => {
+    const query = await discoverMoviesByGenre(genre, page);
+    const data = query.results;
 
-  //   if (pagesToFetch > page) {
-  //     return data.concat(await getMoviesByPageCount(page + 1));
-  //   } else {
-  //     return data;
-  //   }
-  // };
-  // const movieData = await getMoviesByPageCount();
-
+    if (pagesToFetch > page) {
+      return data.concat(await getMoviesByPageCount(page + 1));
+    } else {
+      return data;
+    }
+  };
+  const movieData = await getMoviesByPageCount();
+  if (!movieData.length) {
+    return {
+      notFound: true,
+    }
+  }
   return {
     props: {
       genre: genre,
-      genreMovies: dummy,
+      genreMovies: movieData,
     },
   };
 }

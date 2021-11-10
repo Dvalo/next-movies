@@ -108,6 +108,12 @@ export async function getServerSideProps(context) {
   const actorDetails = await fetchActorDetails(actorId);
   const actorCredits = await fetchActorCombinedCredits(actorId);
 
+  if (actorDetails.success !== undefined && !actorDetails.success) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       actorDetails: actorDetails,

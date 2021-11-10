@@ -93,6 +93,12 @@ export async function getServerSideProps(context) {
   const movieCredits = await fetchMovieCreditsById(movieId);
   const movieVideos = await fetchMovieVideosById(movieId);
 
+  if (movieDetails.success !== undefined && !movieDetails.success) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       movieDetails: movieDetails,
