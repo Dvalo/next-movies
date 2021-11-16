@@ -7,9 +7,9 @@ const API_PATH = "https://api.themoviedb.org/3";
  */
 
 export async function fetchTrendingMovies() {
-  return await fetch(
-    `${API_PATH}/trending/movie/week?api_key=${API_KEY}`
-  ).then((res) => res.json());
+  return await fetch(`${API_PATH}/trending/movie/week?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
 }
 
 export async function fetchMovieDetailsById(id) {
@@ -51,9 +51,9 @@ export async function discoverTvShowsByGenre(genreId, page = 1) {
  */
 
 export async function fetchTrendingTvShows() {
-  return await fetch(
-    `${API_PATH}/tv/popular?api_key=${API_KEY}`
-  ).then((res) => res.json());
+  return await fetch(`${API_PATH}/tv/popular?api_key=${API_KEY}`).then((res) =>
+    res.json()
+  );
 }
 
 /**
@@ -61,19 +61,15 @@ export async function fetchTrendingTvShows() {
  */
 
 export async function fetchTrendingActors() {
-  const trendingActors = await fetch(
-    `${API_PATH}/person/popular?api_key=${API_KEY}`
-  ).then((res) => res.json());
-
-  return trendingActors;
+  return await fetch(`${API_PATH}/person/popular?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
 }
 
 export async function fetchActorDetails(actorId) {
-  const actorDetails = await fetch(
-    `${API_PATH}/person/${actorId}?api_key=${API_KEY}`
-  ).then((res) => res.json());
-
-  return actorDetails;
+  return await fetch(`${API_PATH}/person/${actorId}?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
 }
 
 export async function fetchActorCombinedCredits(actorId) {
@@ -82,4 +78,11 @@ export async function fetchActorCombinedCredits(actorId) {
   ).then((res) => res.json());
 }
 
-// https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
+/**
+ * Search
+ */
+export async function searchMultiByTerm(searchTerm, page = 1) {
+  return await fetch(
+    `${API_PATH}/search/multi?api_key=${API_KEY}&query=${searchTerm}&page=${page}`
+  ).then((res) => res.json());
+}
