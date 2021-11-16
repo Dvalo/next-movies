@@ -1,14 +1,7 @@
 import Head from "next/head";
 import Layout from "../../layout/Layout";
 import { Container } from "react-bootstrap";
-import { actorsDummy } from "../../utils/dummy";
-import {
-  discoverMoviesByGenre,
-  fetchActorDetails,
-  fetchTrendingActors,
-  requests,
-} from "../../utils/requests";
-import ShowcaseItem from "../../components/ShowcaseItem";
+import { fetchTrendingActors } from "../../utils/requests";
 import ActorItem from "../../components/ActorItem";
 
 function Actors({ trendingActors }) {
@@ -26,7 +19,7 @@ function Actors({ trendingActors }) {
               </h1>
 
               <div className="showcase-inner-items showcase-inner-items--actors">
-                {trendingActors[0].results.map((actor) => (
+                {trendingActors.map((actor) => (
                   <ActorItem actor={actor} key={actor.id} />
                 ))}
               </div>
@@ -41,11 +34,24 @@ function Actors({ trendingActors }) {
 export default Actors;
 
 export async function getServerSideProps(context) {
-  // const trendingActors = await fetchTrendingActors();
+  const pagesToFetch = 3;
+
+  const getTrendingActorsByPageCount = async (page = 1) => {
+    const query = await fetchTrendingActors(page);
+    const data = query.results;
+
+    if (pagesToFetch > page) {
+      return data.concat(await getTrendingActorsByPageCount(page + 1));
+    } else {
+      return data;
+    }
+  };
+
+  const trendingActors = await getTrendingActorsByPageCount();
 
   return {
     props: {
-      trendingActors: actorsDummy,
+      trendingActors: trendingActors,
     },
   };
 }

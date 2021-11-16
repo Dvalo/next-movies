@@ -60,8 +60,8 @@ export async function fetchTrendingTvShows() {
  * Actors
  */
 
-export async function fetchTrendingActors() {
-  return await fetch(`${API_PATH}/person/popular?api_key=${API_KEY}`).then(
+export async function fetchTrendingActors(page) {
+  return await fetch(`${API_PATH}/person/popular?api_key=${API_KEY}&page=${page}`).then(
     (res) => res.json()
   );
 }
