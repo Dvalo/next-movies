@@ -5,7 +5,11 @@ function ActorItem({ actor, character }) {
   return (
     <a href={`/actor/${actor.id}`} className="actor-item">
       <Image
-        src={`${BASE_URL}${actor.profile_path}`}
+        src={
+          !actor.profile_path
+            ? `/placeholder_actor.jpg`
+            : `${BASE_URL}${actor.profile_path}`
+        }
         alt={actor.name}
         objectFit="cover"
         height={460}
