@@ -57,11 +57,21 @@
 }
 // Extra
 .sect-title {
-    font-size: 40px;
+    font-size: 26px;
     font-weight: 600;
+    letter-spacing: 0px;
     text-transform: uppercase;
-    letter-spacing: 2px;
     margin-bottom: 20px;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
 
     span {
         color: var(--theme-primary-highlight);

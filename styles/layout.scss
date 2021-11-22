@@ -1,4 +1,3 @@
-// temp
 main {
     position: relative;
 }
@@ -8,6 +7,7 @@ main {
 .main-nav {
     position: absolute;
     top: 50px;
+    left: 0;
     width: 100%;
     z-index: 9;
 
@@ -40,9 +40,13 @@ main {
 }
 .secondary-nav {
     position: fixed;
-    width: 110px;
+    width: 80px;
     height: 100%;
     background: var(--theme-secondary);
+
+    @include media-breakpoint-up(md) {
+        width: 110px;
+    }
 
     ul {
         display: flex;
@@ -55,9 +59,17 @@ main {
     }
     li {
         width: 100%;
+
         &:not(:last-child) {
-            margin-bottom: 24px;
+            margin-bottom: 48px;
         }
+
+        @include media-breakpoint-up(md) {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
         &:hover {
             .nav-icon {
                 animation: bounce 1s infinite;
@@ -86,19 +98,29 @@ main {
         }
 
         .nav-icon {
-            font-size: 30px;
-            width: 30px;
-            height: 30px;
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 30px;
+                width: 30px;
+                height: 30px;
+            }
         }
 
         span {
             opacity: 0;
             text-transform: uppercase;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.5px;
             margin-top: 6px;
             transition: 0.1s ease-in-out;
+
+            @include media-breakpoint-up(md) {
+                font-size: 13px;
+            }
         }
 
         &.active {
@@ -118,14 +140,33 @@ main {
     align-items: center;
     height: 100px;
     background: var(--theme-primary);
+    padding: 0 24px;
     border-bottom: 1px solid $border-light;
+
+    @include media-breakpoint-up(md) {
+        padding: 0;
+    }
+
+    .secondary-logo {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+    }
 }
 
 .mov-searchbar {
     background: var(--theme-primary-darker);
-    padding: 20px;
-    margin-left: 30px;
+    padding: 20px 8px;
+    width: 100%;
     border-radius: 8px;
+
+    @include media-breakpoint-up(md) {
+        padding: 20px;
+        margin-left: 24px;
+        width: auto;
+    }
 
     input,
     button {
@@ -138,29 +179,51 @@ main {
         color: var(--theme-text-color);
         font-size: 14px;
         font-weight: 500;
-        min-width: 300px;
+        width: calc(100% - 54px);
 
         &::placeholder {
             color: var(--theme-text-color);
         }
+
+        @include media-breakpoint-up(sm) {
+            width: auto;
+            min-width: 300px;
+        }
     }
     button {
-        padding-right: 15px;
+        padding-right: 10px;
+
+        @include media-breakpoint-up(sm) {
+            padding-right: 15px;
+        }
     }
     .icon {
-        font-size: 22px;
+        font-size: 18px;
         color: var(--theme-primary-highlight);
+
+        @include media-breakpoint-up(sm) {
+            font-size: 22px;
+        }
     }
 }
 
 .inner-layout-content {
-    width: calc(100vw - 110px);
-    margin-left: 110px;
+    width: calc(100vw - 80px);
+    margin-left: 80px;
     overflow: hidden;
+
+    @include media-breakpoint-up(md) {
+        width: calc(100vw - 110px);
+        margin-left: 110px;
+    }
 
     // Move to components
     .showcase-container {
-        padding: 50px;
+        padding: 24px;
+
+        @include media-breakpoint-up(md) {
+            padding: 50px;
+        }
     }
     .load-more {
         margin-top: 48px;
@@ -171,12 +234,37 @@ main {
 
         .showcase-inner-items {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(1, minmax(0, 1fr));
             column-gap: 15px;
-            row-gap: 15px;
+            row-gap: 40px;
+
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                row-gap: 15px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
 
             &--actors {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                row-gap: 40px;
+
+                @include media-breakpoint-up(sm) {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    row-gap: 30px;
+                }
+
+                @include media-breakpoint-up(md) {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    row-gap: 20px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    grid-template-columns: repeat(5, minmax(0, 1fr));
+                    row-gap: 15px;
+                }
 
                 .actor-item {
                     font-family: $font-opensans;
@@ -184,6 +272,10 @@ main {
                     font-weight: 700;
                     text-decoration: none;
                     transition: 0.15s ease-in-out;
+
+                    > div {
+                        width: 100%;
+                    }
 
                     img {
                         transition: 0.15s ease-in-out;
@@ -204,9 +296,14 @@ main {
 }
 .showcase-main {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     column-gap: 15px;
-    row-gap: 15px;
+    row-gap: 40px;
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 15px;
+    }
 }
 
 .main-content {

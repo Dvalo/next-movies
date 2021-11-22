@@ -44,35 +44,64 @@
         }
         .movie-title {
             font-weight: bold;
-            font-size: 110px;
+            font-size: 50px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            @include media-breakpoint-up(md) {
+                font-size: 70px; 
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 110px;
+            }
         }
         .movie-genre-wrapper {
             display: flex;
-            padding-left: 8px;
+            flex-direction: column;
+            margin-top: 8px;
+
+            @include media-breakpoint-up(md) {
+                flex-direction: row;
+                margin-top: 0;
+                padding-left: 8px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-left: 8px;
+            }
 
             .movie-genre {
                 text-transform: uppercase;
-                font-size: 13px;
+                font-size: 11px;
                 font-weight: 600;
-                letter-spacing: 1px;
+                letter-spacing: 2px;
 
                 &:not(:last-child) {
-                    margin-right: 20px;
+                    margin-bottom: 10px;
+                }
+
+                @include media-breakpoint-up(md) {
+                    font-size: 13px;
+                    letter-spacing: 1px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                        margin-right: 20px;
+                    }
                 }
             }
         }
     }
     .slick-arrow {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         position: absolute;
         top: 50%;
-        transform: translateX(-50%);
-        right: 80px;
+        transform: translateY(-50%);
+        right: 10px;
         left: unset;
         bottom: unset;
         width: 50px;
@@ -84,6 +113,15 @@
         z-index: 999;
         transition: all 0.1s ease-out;
 
+        @include media-breakpoint-up(md) {
+            display: flex;
+            right: 20px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            right: 50px;
+        }
+
         &::before {
             display: none;
         }
@@ -91,7 +129,7 @@
         &:hover {
             opacity: 1;
             color: #fff;
-            transform: translateX(-50%) scale(1.1);
+            transform: translateY(-50%) scale(1.1);
         }
 
         .icon {
@@ -114,12 +152,22 @@
         }
     }
     .slick-dots {
+        display: none !important;
         position: absolute;
         top: 50%;
-        transform: translateX(-50%);
-        left: 50px;
+        transform: translateY(-50%);
+        left: 10px;
         bottom: unset;
         width: auto;
+
+        @include media-breakpoint-up(md) {
+            display: block !important;
+            left: 20px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            left: 30px;
+        }
 
         li {
             cursor: default;
@@ -254,24 +302,43 @@
         }
     }
     .showcase-details-wrapper {
-        position: absolute;
+        position: relative;
         display: flex;
         align-items: center;
-        padding: 35px 0;
+        padding: 16px 0;
         width: 100%;
         bottom: 0;
         background: rgba(0, 0, 0, .1);
         backdrop-filter: blur(32px);
+
+        @include media-breakpoint-up(md) {
+            padding: 35px 0;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            position: absolute;
+        }
     }
     .showcase-title {
-        font-size: 50px;
+        font-size: 24px;
         font-weight: 600;
-        margin-bottom: 15px;
+        line-height: 1.25;
+        margin-bottom: 8px;
         color: var(--theme-primary-highlight);
+
+        @include media-breakpoint-up(md) {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
     }
     .showcase-details {
         display: flex;
+        font-size: 13px;
         margin-bottom: 15px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 15px;
+        }
     }
     .showcase-genres {
         margin-bottom: 15px;
@@ -317,6 +384,11 @@
 
 .showcase-trailer-wrapper {
     display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+    }
 
     .showcase-trailer {
         display: flex;
@@ -341,10 +413,18 @@
 
     .actor-wrapper {
         display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
     }
     .actor-details {
         flex: 1;
-        margin-left: 30px;
+
+        @include media-breakpoint-up(md) {
+            margin-left: 30px;
+        }
 
         span {
             // font-size: 14px;
@@ -402,6 +482,7 @@
         // max-width: 65%;
 
         &::before {
+            display: none;
             content: "";
             position: absolute;
             left: 0;
@@ -412,9 +493,14 @@
             user-select: none;
             pointer-events: none;
             z-index: 9;
+
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
         }
 
         &::after {
+            display: none;
             content: "";
             position: absolute;
             right: 0;
@@ -424,6 +510,10 @@
             width: 100px;
             user-select: none;
             pointer-events: none;
+
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
         }
     }
     .filters-wrapper-inner {
@@ -431,14 +521,18 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 0 60px;
+        padding: 0;
         overflow-x: scroll;
         scrollbar-color: var(--theme-secondary) transparent; //firefox
+
+        @include media-breakpoint-up(md) {
+            padding: 0 60px;
+        }
     }
 
     .filter {
         text-transform: uppercase;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 600;
         letter-spacing: 2px;
         color: var(--theme-text-color);
@@ -454,7 +548,15 @@
         }
 
         &:not(:last-child) {
-            margin-right: 42px;
+            margin-right: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 15px;
+
+            &:not(:last-child) {
+                margin-right: 42px;
+            }
         }
     }
 }
