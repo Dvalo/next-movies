@@ -2,8 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 function Thumbnail({ item, path }) {
-  const BASE_URL = "https://image.tmdb.org/t/p/original";
-
   return (
     <Link href={`/${path}/${item.id}`}>
       <a>
@@ -19,7 +17,7 @@ function Thumbnail({ item, path }) {
             src={
               !item.backdrop_path && !item.poster_path
                 ? `/placeholder.jpg`
-                : `${BASE_URL}${item.backdrop_path || item.poster_path}`
+                : `${process.env.API_IMAGES}${item.backdrop_path || item.poster_path}`
             }
             alt={item.original_title}
             layout="responsive"

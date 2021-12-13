@@ -1,14 +1,13 @@
 ## Getting Started
 
-First, run the development server:
+* Clone the next-movies repo.
+* Run ```npm install``` to install the dependencies.
+* Create ```.env.local``` file and paste the contents of ```.env.example``` file.
+* Generate API key by following the instructions here: [https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api)
+* Add generated API key from the step above in the ```.env.local``` file as ```API_KEY```.
+* Run ```npm run dev``` or ```yarn dev``` to run the development server.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) within your browser.
 
 
 ## Preview

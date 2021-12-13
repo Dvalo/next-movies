@@ -12,7 +12,6 @@ import {
 } from "../../utils/requests";
 
 function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
-  const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
 
   return (
     <>
@@ -26,7 +25,7 @@ function MovieSingle({ movieDetails, movieCredits, movieVideos }) {
         <div className="showcase-single">
           <div className="showcase-image">
             <Image
-              src={`${BASE_URL}${
+              src={`${process.env.API_IMAGES}${
                 movieDetails.backdrop_path || movieDetails.poster_path
               }`}
               alt={movieDetails.original_title}

@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function MainSlider({ slides, type }) {
-  const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
   const sliderType = type === "movies" ? movieGenres : tvGenres;
 
   function NextArrow(props) {
@@ -54,7 +53,7 @@ function MainSlider({ slides, type }) {
         <div className="intro-slide" key={slide.id}>
           <div className="intro-slide-inner">
             <Image
-              src={`${BASE_URL}${slide.backdrop_path}`}
+              src={`${process.env.API_IMAGES}${slide.backdrop_path}`}
               alt={slide.original_title}
               objectFit="cover"
               layout="fill"

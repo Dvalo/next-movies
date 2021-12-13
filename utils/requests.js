@@ -1,6 +1,5 @@
 const API_KEY = process.env.API_KEY;
-
-const API_PATH = "https://api.themoviedb.org/3";
+const API_PATH = process.env.API_PATH;
 
 /**
  * Movies

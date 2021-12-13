@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -6,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import ActorItem from "./ActorItem";
 
 function CastSlider({ cast }) {
-  const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
 
   const settings = {
     dots: false,

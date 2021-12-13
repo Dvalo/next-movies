@@ -17,7 +17,6 @@ function MovieSingle({ actorDetails, actorCredits }) {
   const [currentPage, setCurrentPage] = useState(2);
   const [currentCredits, setCurrentCredits] = useState(allCredits.slice(0, 20));
   const [loadMore, setLoadMore] = useState(true);
-  const BASE_URL = "https://image.tmdb.org/t/p/original"; // temp
 
   useEffect(() => {
     if (
@@ -43,7 +42,7 @@ function MovieSingle({ actorDetails, actorCredits }) {
             <div className="actor-wrapper">
               <div className="actor-image">
                 <Image
-                  src={`${BASE_URL}${actorDetails.profile_path}`}
+                  src={`${process.env.API_IMAGES}${actorDetails.profile_path}`}
                   alt={actorDetails.name}
                   objectFit="cover"
                   height={460}
