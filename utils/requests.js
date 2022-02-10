@@ -55,14 +55,32 @@ export async function fetchTrendingTvShows() {
   );
 }
 
+export async function fetchTvShowById(id) {
+  return await fetch(`${API_PATH}/tv/${id}?api_key=${API_KEY}`).then((res) =>
+    res.json()
+  );
+}
+
+export async function fetchTvShowActorsById(id) {
+  return await fetch(`${API_PATH}/tv/${id}/credits?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
+}
+
+export async function fetchTvShowVideosById(id) {
+  return await fetch(`${API_PATH}/tv/${id}/videos?api_key=${API_KEY}`).then(
+    (res) => res.json()
+  );
+}
+
 /**
  * Actors
  */
 
 export async function fetchTrendingActors(page) {
-  return await fetch(`${API_PATH}/person/popular?api_key=${API_KEY}&page=${page}`).then(
-    (res) => res.json()
-  );
+  return await fetch(
+    `${API_PATH}/person/popular?api_key=${API_KEY}&page=${page}`
+  ).then((res) => res.json());
 }
 
 export async function fetchActorDetails(actorId) {
