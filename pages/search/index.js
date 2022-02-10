@@ -50,7 +50,7 @@ function SearchPage({ searchTerm, searchResults }) {
                   <ShowcaseItem
                     item={movie}
                     descType="movie"
-                    path="movie"
+                    path="tv"
                     key={movie.id}
                   />
                 ))}
