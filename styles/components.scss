@@ -361,7 +361,7 @@
             }
         }
     }
-    .showcase-length {
+    .showcase-dot {
         &::before {
             content: "\A";
             display: inline-block;
@@ -379,6 +379,51 @@
         .sect-title {
             padding-left: 10px;
         }
+    }
+}
+
+.showcase-seasons {
+
+    .showcase-season {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $border-light;
+        }
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            padding-bottom: 0;
+            border-bottom: none !important;
+        }
+    }
+    .season-poster {
+        flex-shrink: 0;
+    }
+    .showcase-season-details {
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            margin-left: 20px;
+        }
+    }
+    .season-name {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: var(--theme-primary-highlight);
+
+        @include media-breakpoint-up(md) {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
+    }
+    .season-desc {
+        margin-bottom: 12px;
     }
 }
 
